@@ -98,9 +98,31 @@
     font: inherit;
   }
 
+  html:has(dialog[open]) {
+    overflow: hidden;
+  }
+
+  dialog.lightbox::backdrop {
+    background: transparent;
+  }
+
+  dialog.lightbox[open] {
+    animation: lightbox-in 0.35s var(--ease-garden);
+  }
+
+  @keyframes lightbox-in {
+    from {
+      opacity: 0;
+    }
+  }
+
   @media (prefers-reduced-motion: reduce) {
     html {
       scroll-behavior: auto;
+    }
+
+    dialog.lightbox[open] {
+      animation: none;
     }
   }
 }

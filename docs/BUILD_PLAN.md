@@ -22,7 +22,7 @@ Work one phase at a time. At the end of each phase, run `npm run build`, fix any
 - [x] Check at 360 / 390 / 768 / 1280 / 1440. Nothing may overflow.
 
 ## Phase 3 — Sections, bottom half
-- [ ] The day (schedule and venue map card), Colours (with aso-ebi), Gallery (with filter and lightbox), Gift (bank card and copy), FAQ accordion, Footer.
+- [x] The day (schedule and venue map card), Colours (with aso-ebi), Gallery (with filter and lightbox), Gift (bank card and copy), FAQ accordion, Footer.
 
 ## Phase 4 — RSVP that actually saves
 - [ ] Follow `docs/RSVP_SETUP.md`. RSVPs go to a Google Sheet through a Google Apps Script web app (free, and the couple can read the sheet).

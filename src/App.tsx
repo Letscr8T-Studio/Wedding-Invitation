@@ -1,6 +1,12 @@
 import { LazyMotion } from 'motion/react'
 import { site } from './content'
+import { Colours } from './sections/Colours'
 import { Countdown } from './sections/Countdown'
+import { Day } from './sections/Day'
+import { Faq } from './sections/Faq'
+import { Footer } from './sections/Footer'
+import { Gallery } from './sections/Gallery'
+import { Gift } from './sections/Gift'
 import { Hero } from './sections/Hero'
 import { Nav } from './sections/Nav'
 import { Scripture } from './sections/Scripture'
@@ -24,7 +30,13 @@ export default function App() {
           <Countdown />
           <Scripture />
           <Story />
+          <Day />
+          <Colours />
+          <Gallery />
+          <Gift />
+          <Faq />
         </main>
+        <Footer />
       </div>
     </LazyMotion>
   )
