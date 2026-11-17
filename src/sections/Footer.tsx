@@ -27,7 +27,17 @@ export function Footer() {
           </RevealItem>
         </RevealGroup>
         <div aria-hidden="true" className="mt-16 h-px w-full bg-forest-800" />
-        <p className="m-0 mt-6 text-xs tracking-[0.14em] text-sage-300">{footer.credit}</p>
+        <p className="m-0 mt-6 text-xs tracking-[0.14em] text-sage-300">
+          {footer.credit.before}
+          <a
+            href={footer.credit.url}
+            target="_blank"
+            rel="noopener"
+            className="text-sage-200 underline decoration-hairline-dark underline-offset-4 transition-colors hover:text-ivory hover:decoration-sage-200"
+          >
+            {footer.credit.name}
+          </a>
+        </p>
       </Container>
     </footer>
   )

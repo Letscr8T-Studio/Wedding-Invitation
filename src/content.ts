@@ -53,7 +53,11 @@ export const site = {
   description:
     "You're invited! We're getting married on Saturday 12 December 2026 at Didi Park & Lounge, Kaduna, and we'd love you there.",
   hashtag: '#FoundFavour26',
-  credit: 'Made with love by Letscr8t Studio',
+  credit: {
+    before: 'Made with love by ',
+    name: 'Letscr8t Studio',
+    url: 'https://www.letscr8t.digital',
+  },
   skipToContent: 'Skip to content',
 } as const
 
