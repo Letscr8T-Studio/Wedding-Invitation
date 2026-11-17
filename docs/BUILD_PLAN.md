@@ -13,9 +13,9 @@ Work one phase at a time. At the end of each phase, run `npm run build`, fix any
 - [x] Set up `index.html` with the title, description, theme-color and OG tags (placeholder image for now).
 
 ## Phase 1 — Foundations
-- [ ] `src/content.ts`: typed, holding everything in CONTENT.md.
-- [ ] Components: `Container`, `Eyebrow`, `SectionHeading` (roman plus an italic part), `Button` (variants: dark, light, outline-dark, outline-light; renders `<a>` or `<button>`), `Sprig`, `PhotoFrame` (placeholder with a label, or a real image), `Reveal` (motion wrapper, respects reduced motion).
-- [ ] `lib/useCountdown.ts`, `lib/copy.ts`, `lib/guestName.ts`.
+- [x] `src/content.ts`: typed, holding everything in CONTENT.md.
+- [x] Components: `Container`, `Eyebrow`, `SectionHeading` (roman plus an italic part), `Button` (variants: dark, light, outline-dark, outline-light; renders `<a>` or `<button>`), `Sprig`, `PhotoFrame` (placeholder with a label, or a real image), `Reveal` (motion wrapper, respects reduced motion).
+- [x] `lib/useCountdown.ts`, `lib/copy.ts`, `lib/guestName.ts`.
 
 ## Phase 2 — Sections, top half
 - [ ] Nav, Hero, Countdown, Scripture, Story. Match `design-reference/Main.dc.html` closely.
