@@ -1,5 +1,8 @@
 import { LazyMotion } from 'motion/react'
+import { useEffect, useRef, useState } from 'react'
 import { site } from './content'
+import { Envelope } from './intro/Envelope'
+import { shouldShowIntro } from './lib/intro'
 import { Colours } from './sections/Colours'
 import { Countdown } from './sections/Countdown'
 import { Day } from './sections/Day'
@@ -16,9 +19,20 @@ import { Story } from './sections/Story'
 const loadMotionFeatures = () => import('./lib/motionFeatures').then((mod) => mod.default)
 
 export default function App() {
+  const [showIntro, setShowIntro] = useState(shouldShowIntro)
+  const siteRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const el = siteRef.current
+    if (!el) return
+    if (showIntro) el.setAttribute('inert', '')
+    else el.removeAttribute('inert')
+  }, [showIntro])
+
   return (
     <LazyMotion features={loadMotionFeatures} strict>
-      <div className="overflow-x-clip">
+      {showIntro && <Envelope onDone={() => setShowIntro(false)} />}
+      <div ref={siteRef} className="overflow-x-clip">
         <a
           href="#main"
           className="sr-only rounded-full bg-forest-900 px-5 py-3 text-xs tracking-[0.22em] text-ivory uppercase focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50"

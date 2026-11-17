@@ -32,8 +32,8 @@ Work one phase at a time. At the end of each phase, run `npm run build`, fix any
 - [x] Add a honeypot field against spam.
 
 ## Phase 5 — Envelope intro
-- [ ] `intro/Envelope.tsx` per DESIGN_SPEC §2 and `Welcome.dc.html`: seal tap, flap opens, card rises, then "Enter our wedding".
-- [ ] `?to=Name` personalisation, sessionStorage skip, Skip link, body scroll lock while open, focus trapped in the overlay.
+- [x] `intro/Envelope.tsx` per DESIGN_SPEC §2 and `Welcome.dc.html`: seal tap, flap opens, card rises, then "Enter our wedding".
+- [x] `?to=Name` personalisation, sessionStorage skip, Skip link, body scroll lock while open, focus trapped in the overlay.
 
 ## Phase 6 — Polish ("the madness")
 - [ ] Scroll reveals and the hero load animation.

@@ -25,6 +25,11 @@
       content="Mary &amp; Emmanuel — Saturday 12 December 2026, Kaduna"
     />
     <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      try {
+        if (!sessionStorage.getItem('seenIntro')) document.documentElement.classList.add('intro')
+      } catch (e) {}
+    </script>
   </head>
   <body>
     <div id="root"></div>

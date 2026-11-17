@@ -102,6 +102,47 @@
     overflow: hidden;
   }
 
+  html.intro {
+    background: var(--color-forest-900);
+  }
+
+  .seal {
+    box-shadow:
+      0 0 0 4px rgb(94 117 86 / 0.35),
+      0 10px 20px -8px rgb(0 0 0 / 0.5);
+  }
+
+  .seal::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: 999px;
+    border: 1px solid var(--color-sage-400);
+    animation: seal-breathe 2.4s var(--ease-garden) infinite;
+  }
+
+  @keyframes seal-breathe {
+    0% {
+      opacity: 0.7;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1.45);
+    }
+  }
+
+  .intro-enter {
+    animation: rise-in 0.7s var(--ease-garden) 1.15s both;
+  }
+
+  @keyframes rise-in {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+  }
+
   dialog.lightbox::backdrop {
     background: transparent;
   }
@@ -121,7 +162,9 @@
       scroll-behavior: auto;
     }
 
-    dialog.lightbox[open] {
+    dialog.lightbox[open],
+    .seal::after,
+    .intro-enter {
       animation: none;
     }
   }
