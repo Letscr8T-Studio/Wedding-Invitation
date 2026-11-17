@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Reveal } from '../components/Reveal'
 import { SectionHeading } from '../components/SectionHeading'
 import { faq } from '../content'
 import { cx } from '../lib/cx'
@@ -11,13 +12,15 @@ export function Faq() {
       aria-labelledby="faq-heading"
       className="mx-auto flex max-w-[920px] flex-col gap-10 px-5 section-y min-[400px]:px-8"
     >
-      <SectionHeading
-        id="faq-heading"
-        heading={faq.heading}
-        size="compact"
-        className="text-center"
-      />
-      <div className="border-b border-hairline">
+      <Reveal>
+        <SectionHeading
+          id="faq-heading"
+          heading={faq.heading}
+          size="compact"
+          className="text-center"
+        />
+      </Reveal>
+      <Reveal delay={0.1} className="border-b border-hairline">
         {faq.items.map((item, i) => {
           const open = openIndex === i
           const buttonId = `faq-q-${i}`
@@ -65,7 +68,7 @@ export function Faq() {
             </div>
           )
         })}
-      </div>
+      </Reveal>
     </section>
   )
 }

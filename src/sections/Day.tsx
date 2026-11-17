@@ -1,12 +1,13 @@
 import { Button } from '../components/Button'
 import { Container } from '../components/Container'
 import { Eyebrow } from '../components/Eyebrow'
+import { Reveal, RevealGroup, RevealItem } from '../components/Reveal'
 import { SectionHeading } from '../components/SectionHeading'
 import { day, venue } from '../content'
 
 function Schedule() {
   return (
-    <div className="rounded-md border border-sage-100 bg-ivory p-6 sm:p-10">
+    <div className="w-full rounded-md border border-sage-100 bg-ivory p-6 sm:p-10">
       <Eyebrow className="mb-6">{day.scheduleTitle}</Eyebrow>
       <ol className="m-0 list-none p-0">
         {day.schedule.map((item) => (
@@ -92,7 +93,7 @@ function DirectionsIcon() {
 
 function Venue() {
   return (
-    <div className="flex flex-col overflow-hidden rounded-md surface-dark">
+    <div className="flex w-full flex-col overflow-hidden rounded-md surface-dark">
       <VenueMap />
       <div className="flex flex-col gap-5 p-6 sm:p-10">
         <Eyebrow tone="onDark">{day.venueEyebrow}</Eyebrow>
@@ -130,11 +131,17 @@ export function Day() {
   return (
     <section id="day" aria-labelledby="day-heading" className="bg-sage-50 section-y">
       <Container className="flex flex-col gap-10 md:gap-14">
-        <SectionHeading id="day-heading" heading={day.heading} />
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,420px),1fr))] gap-8">
-          <Schedule />
-          <Venue />
-        </div>
+        <Reveal>
+          <SectionHeading id="day-heading" heading={day.heading} />
+        </Reveal>
+        <RevealGroup className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,420px),1fr))] gap-8">
+          <RevealItem className="flex">
+            <Schedule />
+          </RevealItem>
+          <RevealItem className="flex">
+            <Venue />
+          </RevealItem>
+        </RevealGroup>
       </Container>
     </section>
   )

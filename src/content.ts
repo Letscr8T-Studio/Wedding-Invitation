@@ -1,4 +1,4 @@
-import { whatsappLink } from './lib/links'
+import { whatsappLink } from './lib/links.ts'
 
 /** Inline text with italic runs: `['Our ', { em: 'story' }]`. */
 export type Rich = readonly (string | { readonly em: string })[]
@@ -63,6 +63,10 @@ export const event = {
   city: 'Kaduna',
   countdownTarget: '2026-12-12T10:00:00+01:00',
   calendarTitle: "Mary & Emmanuel's Wedding",
+  calendarStart: '20261212',
+  calendarEnd: '20261213',
+  calendarLocation: 'Didi Park & Lounge, 5 Kachia Road, Barnawa, Kaduna 800282',
+  icsFile: 'mary-and-emmanuel.ics',
   googleCalendarUrl:
     'https://calendar.google.com/calendar/render?action=TEMPLATE&text=Mary+%26+Emmanuel%27s+Wedding&dates=20261212/20261213&location=Didi+Park+and+Lounge,+5+Kachia+Road,+Barnawa,+Kaduna',
 } as const
@@ -111,6 +115,7 @@ export const countdown = {
   regionLabel: 'Countdown',
   units: { days: 'Days', hours: 'Hours', minutes: 'Minutes', seconds: 'Seconds' },
   addToCalendar: 'Add to calendar',
+  ics: 'Apple / Outlook',
 } as const
 
 export const scripture = {
@@ -392,6 +397,20 @@ export const footer = {
   line: `${event.dateLong} · ${venue.name}, ${event.city}`,
   hashtag: site.hashtag,
   credit: site.credit,
+} as const
+
+export const share = {
+  eyebrow: hero.eyebrow,
+  cardLine: 'request the honour of your presence at their wedding',
+  dateShort: '12.12.26',
+  weekday: event.weekday,
+  city: event.city,
+  venue: venue.name,
+  addressLines: ['Didi Park & Lounge, 5 Kachia Road, Barnawa', 'opposite Kalapazi Barracks'],
+  colours: 'Pale green & white',
+  rsvp: `RSVP ${contact.phoneDisplay}`,
+  seal: hero.seal,
+  date: event.dateDots,
 } as const
 
 export const intro = {

@@ -1,6 +1,7 @@
 import { useEffect, useId, useRef, useState, type FormEvent, type ReactNode } from 'react'
 import { Button } from '../components/Button'
 import { Container } from '../components/Container'
+import { Reveal } from '../components/Reveal'
 import { SectionHeading } from '../components/SectionHeading'
 import { contact, rsvp } from '../content'
 import { cx } from '../lib/cx'
@@ -276,8 +277,10 @@ export function Rsvp() {
   return (
     <section id="rsvp" aria-labelledby="rsvp-heading" className="bg-sage-150 section-y">
       <Container className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,420px),1fr))] gap-12 md:gap-16">
-        <Contact />
-        <div className="relative rounded-lg bg-ivory p-[clamp(24px,4vw,48px)]">
+        <Reveal>
+          <Contact />
+        </Reveal>
+        <Reveal delay={0.12} className="relative rounded-lg bg-ivory p-[clamp(24px,4vw,48px)]">
           {sent ? (
             <ThankYou
               data={sent}
@@ -296,7 +299,7 @@ export function Rsvp() {
               }}
             />
           )}
-        </div>
+        </Reveal>
       </Container>
     </section>
   )

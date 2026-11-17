@@ -36,12 +36,12 @@ Work one phase at a time. At the end of each phase, run `npm run build`, fix any
 - [x] `?to=Name` personalisation, sessionStorage skip, Skip link, body scroll lock while open, focus trapped in the overlay.
 
 ## Phase 6 — Polish ("the madness")
-- [ ] Scroll reveals and the hero load animation.
-- [ ] Optional background music toggle (an mp3 in `/public/audio`; plays only after the seal tap; remembers mute).
-- [ ] `.ics` download alongside Google Calendar.
-- [ ] Generate `public/og.png` (1200×630) and `public/invite-card.png` (1080×1350) from the invite design. Build a hidden `/og` render or use a small Playwright script, then screenshot it.
-- [ ] Favicon and apple-touch-icon (M&E monogram).
-- [ ] Lighthouse mobile: Performance ≥ 90, Accessibility ≥ 95.
+- [x] Scroll reveals and the hero load animation.
+- [ ] Optional background music toggle (an mp3 in `/public/audio`; plays only after the seal tap; remembers mute). _Waiting on a song from the couple._
+- [x] `.ics` download alongside Google Calendar.
+- [x] Generate `public/og.png` (1200×630) and `public/invite-card.png` (1080×1350) from the invite design. `npm run share` renders `share.html` with the installed Chrome.
+- [x] Favicon and apple-touch-icon (M&E monogram).
+- [x] Lighthouse mobile: Performance ≥ 90, Accessibility ≥ 95. _(92–94 / 100 / 100 / 100)_
 
 ## Phase 7 — Real content
 - [ ] Swap in the couple's photos. Convert to WebP at about 1600px on the long edge and about 75% quality, using `sharp` in a one-off script.

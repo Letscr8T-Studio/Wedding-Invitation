@@ -1,5 +1,6 @@
 import { Button } from '../components/Button'
 import { Container } from '../components/Container'
+import { Reveal } from '../components/Reveal'
 import { SectionHeading } from '../components/SectionHeading'
 import { colours } from '../content'
 
@@ -38,7 +39,7 @@ export function Colours() {
       aria-labelledby="colours-heading"
       className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,420px),1fr))] items-center gap-16 section-y"
     >
-      <div className="flex flex-col gap-6">
+      <Reveal className="flex flex-col gap-6">
         <SectionHeading id="colours-heading" heading={colours.heading} />
         <p className="m-0 max-w-[460px] text-[17px] leading-[1.75] text-forest-800">
           {colours.intro}
@@ -60,8 +61,10 @@ export function Colours() {
           </div>
           <Button href={asoEbi.href}>{asoEbi.cta}</Button>
         </div>
-      </div>
-      <Swatches />
+      </Reveal>
+      <Reveal delay={0.15}>
+        <Swatches />
+      </Reveal>
     </Container>
   )
 }

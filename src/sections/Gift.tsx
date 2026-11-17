@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Button } from '../components/Button'
 import { Container } from '../components/Container'
+import { Reveal } from '../components/Reveal'
 import { SectionHeading } from '../components/SectionHeading'
 import { couple, gift } from '../content'
 import { copyText } from '../lib/copy'
@@ -95,13 +96,13 @@ export function Gift() {
       aria-labelledby="gift-heading"
       className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,420px),1fr))] items-center gap-12 section-y md:gap-16"
     >
-      <div className="flex flex-col gap-6">
+      <Reveal className="flex flex-col gap-6">
         <SectionHeading id="gift-heading" heading={gift.heading} />
         <p className="m-0 max-w-[460px] text-[17px] leading-[1.75] text-forest-800">{gift.body}</p>
-      </div>
-      <div className="flex justify-center">
+      </Reveal>
+      <Reveal delay={0.15} className="flex justify-center">
         <BankCard />
-      </div>
+      </Reveal>
     </Container>
   )
 }

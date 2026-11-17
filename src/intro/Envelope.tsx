@@ -181,7 +181,7 @@ export function Envelope({ onDone }: { onDone: () => void }) {
         </div>
       </div>
 
-      <div className="relative flex min-h-[104px] flex-col items-center justify-end gap-4">
+      <div className="relative flex min-h-[104px] flex-col items-center justify-end gap-4 bg-forest-900">
         {open ? (
           <button
             ref={enterRef}

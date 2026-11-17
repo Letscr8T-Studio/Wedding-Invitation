@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Container } from '../components/Container'
 import { Lightbox } from '../components/Lightbox'
 import { PlayBadge } from '../components/PlayBadge'
+import { Reveal } from '../components/Reveal'
 import { SectionHeading } from '../components/SectionHeading'
 import { gallery, site, type GalleryItem, type Tone } from '../content'
 import { cx } from '../lib/cx'
@@ -99,7 +100,7 @@ export function Gallery() {
   return (
     <section id="gallery" aria-labelledby="gallery-heading" className="surface-dark section-y">
       <Container className="flex flex-col gap-10 md:gap-12">
-        <div className="flex flex-wrap items-end justify-between gap-6">
+        <Reveal className="flex flex-wrap items-end justify-between gap-6">
           <SectionHeading id="gallery-heading" heading={gallery.heading} tone="onDark" />
           <div role="group" aria-label={gallery.filterLabel} className="flex flex-wrap gap-2">
             {gallery.filters.map((f) => (
@@ -108,20 +109,20 @@ export function Gallery() {
               </FilterPill>
             ))}
           </div>
-        </div>
+        </Reveal>
 
-        <div className="grid grid-flow-dense auto-rows-[96px] grid-cols-2 gap-3 sm:auto-rows-[120px] sm:gap-4 lg:grid-cols-4">
+        <Reveal className="grid grid-flow-dense auto-rows-[96px] grid-cols-2 gap-3 sm:auto-rows-[120px] sm:gap-4 lg:grid-cols-4">
           {items.map((item, i) => (
             <Tile key={item.id} item={item} onOpen={() => setOpenIndex(i)} />
           ))}
-        </div>
+        </Reveal>
 
-        <p className="m-0 text-center font-display text-2xl text-sage-200 italic">
+        <Reveal as="p" className="m-0 text-center font-display text-2xl text-sage-200 italic">
           {gallery.shareLine}{' '}
           <span className="font-sans text-lg font-normal tracking-[0.08em] text-ivory not-italic">
             {site.hashtag}
           </span>
-        </p>
+        </Reveal>
       </Container>
 
       <Lightbox items={items} index={openIndex} onIndexChange={setOpenIndex} />

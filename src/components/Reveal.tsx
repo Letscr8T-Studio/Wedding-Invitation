@@ -1,7 +1,6 @@
 import { m, useReducedMotion, type Variants } from 'motion/react'
 import type { ReactNode } from 'react'
-
-const EASE_GARDEN = [0.2, 0.8, 0.2, 1] as const
+import { EASE_GARDEN } from '../lib/motion'
 
 const item: Variants = {
   hidden: { opacity: 0, y: 24 },
@@ -19,7 +18,7 @@ const group: Variants = {
 
 const viewport = { once: true, margin: '0px 0px -10% 0px' } as const
 
-type Tag = 'div' | 'section' | 'article' | 'header' | 'ul' | 'li' | 'p' | 'span'
+type Tag = 'div' | 'section' | 'article' | 'header' | 'ul' | 'ol' | 'li' | 'p' | 'span'
 
 type Props = {
   as?: Tag
