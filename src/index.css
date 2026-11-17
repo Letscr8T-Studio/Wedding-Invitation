@@ -37,6 +37,11 @@
   --font-sans: 'Jost', system-ui, sans-serif;
 
   --ease-garden: cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  --shadow-seal: 0 20px 40px -20px rgb(46 59 44 / 0.6);
+  --shadow-swatch: 0 30px 60px -30px rgb(46 59 44 / 0.25);
+  --shadow-card: 0 40px 80px -40px rgb(46 59 44 / 0.7);
+  --shadow-envelope: 0 20px 40px -24px rgb(0 0 0 / 0.5);
 }
 
 @utility section-y {
@@ -69,6 +74,10 @@
   :focus-visible {
     outline: 2px solid var(--focus-ring, var(--color-sage-600));
     outline-offset: 3px;
+  }
+
+  [id] {
+    scroll-margin-top: 80px;
   }
 
   h1,

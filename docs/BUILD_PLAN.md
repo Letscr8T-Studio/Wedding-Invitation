@@ -18,8 +18,8 @@ Work one phase at a time. At the end of each phase, run `npm run build`, fix any
 - [x] `lib/useCountdown.ts`, `lib/copy.ts`, `lib/guestName.ts`.
 
 ## Phase 2 — Sections, top half
-- [ ] Nav, Hero, Countdown, Scripture, Story. Match `design-reference/Main.dc.html` closely.
-- [ ] Check at 360 / 390 / 768 / 1280 / 1440. Nothing may overflow.
+- [x] Nav, Hero, Countdown, Scripture, Story. Match `design-reference/Main.dc.html` closely.
+- [x] Check at 360 / 390 / 768 / 1280 / 1440. Nothing may overflow.
 
 ## Phase 3 — Sections, bottom half
 - [ ] The day (schedule and venue map card), Colours (with aso-ebi), Gallery (with filter and lightbox), Gift (bank card and copy), FAQ accordion, Footer.
