@@ -9,7 +9,8 @@
     "lint": "oxlint && prettier --check .",
     "preview": "vite preview",
     "format": "prettier --write .",
-    "share": "node scripts/render-share.mjs"
+    "share": "node scripts/render-share.mjs",
+    "links": "node scripts/guest-links.mjs"
   },
   "dependencies": {
     "@fontsource/cormorant-garamond": "^5.3.0",

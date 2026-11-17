@@ -411,6 +411,8 @@ export const share = {
   rsvp: `RSVP ${contact.phoneDisplay}`,
   seal: hero.seal,
   date: event.dateDots,
+  guestMessage: (name: string, link: string) =>
+    `Dear ${name}, you're invited to the wedding of Mary & Emmanuel — ${event.dateLong}, ${venue.name}, ${event.city}.\n\nOpen your invitation: ${link}`,
 } as const
 
 export const intro = {

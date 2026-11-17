@@ -1,0 +1,5 @@
+# Copy this file to guests.txt (git-ignored) and list one guest per line.
+# Add a phone number after a comma to also get a one-tap WhatsApp link for that guest.
+Aunty Grace
+Mr & Mrs Adeyemi, 08031234567
+Chinedu Okafor, +2348021234567

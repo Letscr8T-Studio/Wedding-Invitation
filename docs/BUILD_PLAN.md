@@ -52,4 +52,4 @@ Work one phase at a time. At the end of each phase, run `npm run build`, fix any
 - [ ] Push to GitHub and import into Vercel (framework: Vite). Add `VITE_RSVP_ENDPOINT` in the Vercel env settings.
 - [ ] Optional custom domain, e.g. `maryandemmanuel.com.ng` or `foundfavour26.com`.
 - [ ] Paste the live link into WhatsApp to check that the preview image and title look right.
-- [ ] Generate personalised links (`?to=Name`) for the couple's guest list. A tiny script can make a CSV of name → link.
+- [x] Generate personalised links (`?to=Name`) for the couple's guest list: `npm run links -- <site-url>` reads `guests.txt` and writes `guest-links.csv`.
