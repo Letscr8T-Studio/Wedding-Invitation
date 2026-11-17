@@ -40,7 +40,7 @@ export const contact = {
 export const site = {
   title: 'Mary & Emmanuel — 12.12.2026',
   description:
-    "You're invited to the wedding of Mary & Emmanuel — Saturday 12 December 2026, Didi Park & Lounge, Kaduna.",
+    "You're invited! We're getting married on Saturday 12 December 2026 at Didi Park & Lounge, Kaduna, and we'd love you there.",
   hashtag: '#FoundFavour26',
   credit: 'Made with love by Letscr8t Studio',
   skipToContent: 'Skip to content',
@@ -96,8 +96,8 @@ export const nav = {
 } as const
 
 export const hero = {
-  eyebrow: 'Together with their families',
-  line: 'request the honour of your presence as they become one, before God and all who love them.',
+  eyebrow: 'Together with our families',
+  line: 'request the honour of your presence as we become one, before God and all who love us.',
   dateLabel: event.weekday,
   date: event.dateDots,
   placeLabel: event.city,
@@ -136,7 +136,7 @@ export const story = {
     {
       number: 'Chapter one',
       title: 'The first hello',
-      body: '[Where Mary & Emmanuel first met — two or three lines from the couple.]',
+      body: '[Where we first met — two or three lines, in our own words.]',
       tone: 'sage-200',
       photo: { src: null, alt: 'Mary and Emmanuel when they first met', label: 'Photo · [year]' },
     },
@@ -195,7 +195,7 @@ export const colours = {
   ],
   asoEbi: {
     title: 'Aso-ebi is available',
-    details: '[Fabric details & price — from the couple]',
+    details: '[Fabric details & price — to confirm]',
     cta: 'Order yours',
     href: whatsappLink(
       PHONE_INTL,
@@ -306,8 +306,8 @@ export const gallery = {
 } as const
 
 export const gift = {
-  heading: { roman: 'Bless', italic: 'the couple' } satisfies Heading,
-  body: "Your presence is the greatest gift. If you'd also like to bless our new home, you can send a gift directly — from anywhere in the world.",
+  heading: { roman: 'Bless', italic: 'our new home' } satisfies Heading,
+  body: "Your presence is the greatest gift you could give us. If you'd also like to send something, you can give to us directly — from anywhere in the world.",
   bank: 'Providus Bank',
   accountName: couple.brideFullName,
   accountNumber: '6503481739',
@@ -333,7 +333,7 @@ export const rsvp = {
     phone: { label: 'Phone number', placeholder: '080…' },
     attending: { legend: 'Attending?', yes: 'Joyfully accepts', no: 'Regretfully declines' },
     guests: { label: 'Number of guests', min: 1, max: 4 },
-    note: { label: 'A prayer or wish for the couple' },
+    note: { label: 'A prayer or wish for us' },
     honeypot: 'Leave this field empty',
     submit: 'Send RSVP',
     sending: 'Sending…',
@@ -372,7 +372,7 @@ export const faq = {
   items: [
     {
       q: 'What time does it start?',
-      a: '[Ceremony and reception times — to confirm.] Please arrive 30 minutes early so you are seated before the bride walks in.',
+      a: '[Ceremony and reception times — to confirm.] Please arrive 30 minutes early so you’re seated before Mary walks down the aisle.',
     },
     {
       q: 'Can I bring a plus-one or children?',
@@ -388,7 +388,7 @@ export const faq = {
     },
     {
       q: 'Can I take photos?',
-      a: 'Please do — and post them with #FoundFavour26 so the couple can relive the day through your eyes.',
+      a: 'Please do — and post them with #FoundFavour26 so we can relive the day through your eyes.',
     },
   ],
 } as const
@@ -401,7 +401,7 @@ export const footer = {
 
 export const share = {
   eyebrow: hero.eyebrow,
-  cardLine: 'request the honour of your presence at their wedding',
+  cardLine: 'request the honour of your presence at our wedding',
   dateShort: '12.12.26',
   weekday: event.weekday,
   city: event.city,
@@ -412,14 +412,14 @@ export const share = {
   seal: hero.seal,
   date: event.dateDots,
   guestMessage: (name: string, link: string) =>
-    `Dear ${name}, you're invited to the wedding of Mary & Emmanuel — ${event.dateLong}, ${venue.name}, ${event.city}.\n\nOpen your invitation: ${link}`,
+    `Dear ${name}, we're getting married and we'd love you to celebrate with us — ${event.dateLong}, ${venue.name}, ${event.city}.\n\nOpen your invitation: ${link}\n\nWith love,\nMary & Emmanuel`,
 } as const
 
 export const intro = {
   greetingPrefix: 'Dear',
   defaultGuest: 'Guest',
   invited: 'you’re invited',
-  cardEyebrow: 'The wedding of',
+  cardEyebrow: 'Join us for the wedding of',
   cardDate: `${event.dateDots} — ${event.city}`,
   tapHint: 'Tap the seal to open',
   openLabel: 'Open the invitation',

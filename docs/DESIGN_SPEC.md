@@ -67,7 +67,7 @@ Reference: `Welcome.dc.html`.
 - Top: an eyebrow with the guest's name, then *"you're invited"* in italic Cormorant.
   - **Personalised links:** `?to=Aunty%20Grace` shows "DEAR AUNTY GRACE". With no param it shows "DEAR GUEST". Sanitise the value to text only, max 40 characters.
 - Centre: the envelope (back `sage-300`, front pocket `sage-200` V-shape, flap `sage-400` triangle) with the M&E wax seal (`sage-600` circle, Pinyon Script).
-- Tap the seal: the flap rotates open (rotateX 180°, 0.6s), the card rises out (0.9s, 0.35s delay), and the seal fades. The card shows "THE WEDDING OF / Mary & *Emmanuel* / 12 · 12 · 2026 — KADUNA".
+- Tap the seal: the flap rotates open (rotateX 180°, 0.6s), the card rises out (0.9s, 0.35s delay), and the seal fades. The card shows "JOIN US FOR THE WEDDING OF / Mary & *Emmanuel* / 12 · 12 · 2026 — KADUNA".
 - An "Enter our wedding" button appears. It fades the overlay out and unlocks scroll.
 - Store `seenIntro` in sessionStorage so a refresh skips the intro. Add a small "Skip" link for returning guests.
 - Background music is optional (phase 6): a small mute/unmute pill that starts only after the seal tap.
@@ -76,7 +76,7 @@ Reference: `Welcome.dc.html`.
 
 1. **Nav**: sticky with an ivory blur background. Left: the "M&E" monogram (the & in Pinyon). Centre: Our story · The day · Colours · Gallery · Gift (hidden under 820px). Right: a dark "RSVP" pill. Links scroll smoothly.
 2. **Hero**: two columns that stack on mobile.
-   - Left column: the eyebrow "Together with their families", then *Mary*, a script &, and *Emmanuel* in italic. Below that, the italic line "request the honour of your presence…", a hairline, and the date and venue blocks ("SATURDAY / 12 · 12 · 2026" | "KADUNA / Didi Park & Lounge").
+   - Left column: the eyebrow "Together with our families", then *Mary*, a script &, and *Emmanuel* in italic. Below that, the italic line "request the honour of your presence…", a hairline, and the date and venue blocks ("SATURDAY / 12 · 12 · 2026" | "KADUNA / Didi Park & Lounge").
    - Right column: the arch-shaped couple photo, with an offset outline arch behind it. A rotated dark circular "Save the date" seal overlaps its bottom-left.
 3. **Countdown**: a `forest-900` band. It shows *Until we say "I do"*, a live DD/HH/MM/SS countdown, and an "Add to calendar" outline pill (Google Calendar link; optionally also an .ics download).
 4. **Scripture**: a `sage-150` band with a centred sprig, then Proverbs 18:22 in huge light serif, with "He who finds a wife" and "favour" in italic. The reference "PROVERBS 18 : 22" sits below as an eyebrow.
@@ -86,7 +86,7 @@ Reference: `Welcome.dc.html`.
    - Venue: a dark card with a drawn line map (Kachia Road, Enyo Station, Kalapazi Barracks, plus a sage pin). Below the map: the name, the address, landmark chips, and "Get directions" (Google Maps) and "Lost? WhatsApp us" buttons.
 7. **Colours of the day**: copy on the left, with "Ladies" and "Gentlemen" lines and a dashed **aso-ebi** box ("Order yours" opens a WhatsApp chat). On the right, two big overlapping circles: Pale green (`#C8D5BE`) and White, offset diagonally.
 8. **Gallery**: a `forest-900` band. Heading "Moments *so far*" with filter pills (All / Photos / Films). Below is a dense grid in auto-fill columns with rows of mixed height. Video tiles show a play button and open in a lightbox modal. Photos open in a lightbox with swipe and arrow keys. A hashtag line **#FoundFavour26** sits underneath.
-9. **Gift**: copy on the left, "Bless *the couple*". On the right, a **bank card**: forest-900, 1.586 ratio, a large faint "M&E" script watermark, "PROVIDUS BANK", a chip icon, the number `6503 481 739`, "MARY ONYINOYI AUDU", and a "Copy account number" button that changes to "Copied ✓" for 2.2s.
+9. **Gift**: copy on the left, "Bless *our new home*". On the right, a **bank card**: forest-900, 1.586 ratio, a large faint "M&E" script watermark, "PROVIDUS BANK", a chip icon, the number `6503 481 739`, "MARY ONYINOYI AUDU", and a "Copy account number" button that changes to "Copied ✓" for 2.2s.
 10. **RSVP**: a `sage-150` band.
     - Left: "Will you *be there?*", a deadline line, the contact number, Call and WhatsApp buttons.
     - Right: an ivory form with full name, phone, Attending (two pill toggles, `aria-pressed`), number of guests (1–4), and a prayer or wish for the couple. The submit button reads "Send RSVP".
