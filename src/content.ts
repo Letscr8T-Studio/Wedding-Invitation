@@ -335,6 +335,24 @@ export const rsvp = {
     error: 'Your RSVP didn’t go through. Please try again, or send it on WhatsApp.',
     whatsappFallback: 'Send via WhatsApp instead',
   },
+  whatsappMessage: (r: {
+    name: string
+    phone: string
+    attending: 'yes' | 'no'
+    guests: number
+    note: string
+  }) =>
+    [
+      "RSVP — Mary & Emmanuel's wedding",
+      `Name: ${r.name}`,
+      r.phone && `Phone: ${r.phone}`,
+      `Attending: ${r.attending === 'yes' ? 'Joyfully accepts' : 'Regretfully declines'}`,
+      r.attending === 'yes' && `Guests: ${r.guests}`,
+      r.note && `Message: ${r.note}`,
+    ]
+      .filter(Boolean)
+      .join('\n'),
+  whatsappHref: (text: string) => whatsappLink(PHONE_INTL, text),
   thanks: {
     script: 'Thank you',
     accepts: (first: string) => `We can’t wait to celebrate with you${first ? `, ${first}` : ''}.`,

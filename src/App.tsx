@@ -9,6 +9,7 @@ import { Gallery } from './sections/Gallery'
 import { Gift } from './sections/Gift'
 import { Hero } from './sections/Hero'
 import { Nav } from './sections/Nav'
+import { Rsvp } from './sections/Rsvp'
 import { Scripture } from './sections/Scripture'
 import { Story } from './sections/Story'
 
@@ -34,6 +35,7 @@ export default function App() {
           <Colours />
           <Gallery />
           <Gift />
+          <Rsvp />
           <Faq />
         </main>
         <Footer />

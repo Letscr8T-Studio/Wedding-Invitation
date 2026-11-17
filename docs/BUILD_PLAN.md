@@ -25,11 +25,11 @@ Work one phase at a time. At the end of each phase, run `npm run build`, fix any
 - [x] The day (schedule and venue map card), Colours (with aso-ebi), Gallery (with filter and lightbox), Gift (bank card and copy), FAQ accordion, Footer.
 
 ## Phase 4 — RSVP that actually saves
-- [ ] Follow `docs/RSVP_SETUP.md`. RSVPs go to a Google Sheet through a Google Apps Script web app (free, and the couple can read the sheet).
-- [ ] The endpoint URL comes from `VITE_RSVP_ENDPOINT` in `.env.local` (git-ignored). Add a `.env.example`.
-- [ ] POST as `text/plain` JSON (this avoids a CORS preflight). Show loading, success and error states.
-- [ ] Error fallback: a "Send via WhatsApp instead" button that opens `wa.me` with the RSVP pre-filled.
-- [ ] Add a honeypot field against spam.
+- [x] Follow `docs/RSVP_SETUP.md`. RSVPs go to a Google Sheet through a Google Apps Script web app (free, and the couple can read the sheet).
+- [x] The endpoint URL comes from `VITE_RSVP_ENDPOINT` in `.env.local` (git-ignored). Add a `.env.example`.
+- [x] POST as `text/plain` JSON (this avoids a CORS preflight). Show loading, success and error states.
+- [x] Error fallback: a "Send via WhatsApp instead" button that opens `wa.me` with the RSVP pre-filled.
+- [x] Add a honeypot field against spam.
 
 ## Phase 5 — Envelope intro
 - [ ] `intro/Envelope.tsx` per DESIGN_SPEC §2 and `Welcome.dc.html`: seal tap, flap opens, card rises, then "Enter our wedding".
