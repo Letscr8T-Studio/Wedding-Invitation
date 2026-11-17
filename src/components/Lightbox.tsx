@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { gallery, type GalleryItem } from '../content'
 import { toEmbed } from '../lib/embed'
+import { backgroundMusic } from '../lib/music'
 import { PhotoFrame } from './PhotoFrame'
 
 type Props = {
@@ -31,6 +32,26 @@ function Chevron({ flip }: { flip?: boolean }) {
   )
 }
 
+/** The full film, with sound. Background music steps aside while it plays. */
+function Film({ src, poster, label }: { src: string; poster: string | null; label: string }) {
+  useEffect(() => () => backgroundMusic.release('film'), [])
+  return (
+    <video
+      src={src}
+      poster={poster ?? undefined}
+      aria-label={label}
+      controls
+      autoPlay
+      playsInline
+      preload="metadata"
+      onPlay={() => backgroundMusic.hold('film')}
+      onPause={() => backgroundMusic.release('film')}
+      onEnded={() => backgroundMusic.release('film')}
+      className="h-auto max-h-[78dvh] w-auto max-w-full rounded-[4px] bg-forest-850"
+    />
+  )
+}
+
 function Media({ item }: { item: GalleryItem }) {
   const embed = item.kind === 'video' ? toEmbed(item.videoUrl) : null
 
@@ -46,23 +67,16 @@ function Media({ item }: { item: GalleryItem }) {
     )
   }
   if (embed?.kind === 'video') {
-    return (
-      <video
-        src={embed.src}
-        controls
-        autoPlay
-        playsInline
-        preload="none"
-        className="max-h-[78dvh] w-full max-w-5xl rounded-[4px] bg-forest-850"
-      />
-    )
+    return <Film src={embed.src} poster={item.videoPoster ?? item.src} label={item.alt} />
   }
   if (item.src) {
     return (
       <img
         src={item.src}
         alt={item.alt}
-        className="max-h-[78dvh] w-auto max-w-full rounded-[4px] object-contain"
+        width={item.width}
+        height={item.height}
+        className="h-auto max-h-[78dvh] w-auto max-w-full rounded-[4px] object-contain"
       />
     )
   }

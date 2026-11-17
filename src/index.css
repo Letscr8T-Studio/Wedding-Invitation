@@ -150,6 +150,18 @@
     animation: hint-bob 1.1s ease-in-out infinite alternate;
   }
 
+  .music-bar {
+    height: 14px;
+    transform-origin: bottom;
+    animation: music-bar 0.9s ease-in-out infinite alternate;
+  }
+
+  @keyframes music-bar {
+    from {
+      transform: scaleY(0.25);
+    }
+  }
+
   @keyframes hint-bob {
     to {
       transform: translateY(-7px);
@@ -187,7 +199,8 @@
     .seal::after,
     .intro-enter,
     .intro-hint,
-    .hint-bob {
+    .hint-bob,
+    .music-bar {
       animation: none;
     }
   }

@@ -1,4 +1,5 @@
 import { m, useReducedMotion, type Variants } from 'motion/react'
+import { useState } from 'react'
 import { Container } from '../components/Container'
 import { Eyebrow } from '../components/Eyebrow'
 import { PhotoFrame } from '../components/PhotoFrame'
@@ -38,6 +39,8 @@ function Fact({ label, value }: { label: string; value: string }) {
 
 export function Hero({ ready }: { ready: boolean }) {
   const reduce = useReducedMotion()
+  // Behind the envelope the portrait isn't visible yet, so it shouldn't compete with the intro.
+  const [introShowing] = useState(() => !ready)
   const state = ready || reduce ? 'show' : 'hidden'
   const initial = reduce ? false : 'hidden'
 
@@ -120,7 +123,7 @@ export function Hero({ ready }: { ready: boolean }) {
               width={920}
               height={1242}
               sizes="(min-width: 1024px) 460px, 88vw"
-              priority
+              priority={!introShowing}
               ornament
               className="w-full"
             />

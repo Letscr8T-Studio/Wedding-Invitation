@@ -13,6 +13,8 @@ export type Photo = {
   readonly label: string
   readonly width?: number
   readonly height?: number
+  /** Silent loop played over the photo on good connections. */
+  readonly loop?: string | null
 }
 
 export type GalleryItem = {
@@ -23,9 +25,18 @@ export type GalleryItem = {
   readonly tone: Tone
   readonly rows: number
   readonly cols: 1 | 2
+  /** Photo, or the poster frame for a film tile. */
   readonly src: string | null
+  readonly width?: number
+  readonly height?: number
+  /** Silent preview loop shown in the tile on good connections. */
+  readonly loop: string | null
+  /** Full film opened in the lightbox. */
   readonly videoUrl: string | null
+  readonly videoPoster: string | null
 }
+
+const MEDIA = '/media'
 
 const PHONE_INTL = '2349014214591'
 
@@ -103,8 +114,10 @@ export const hero = {
   placeLabel: event.city,
   place: venue.name,
   photo: {
-    src: null,
-    alt: 'Mary and Emmanuel',
+    src: `${MEDIA}/hero-couple-portrait.webp`,
+    width: 960,
+    height: 1200,
+    alt: 'Emmanuel holding Mary’s hand as they look at her engagement ring',
     label: 'Couple portrait',
   } satisfies Photo,
   seal: { script: 'Save', caption: 'the date' },
@@ -145,7 +158,14 @@ export const story = {
       title: 'The question',
       body: '[How Emmanuel proposed, and what Mary said first.]',
       tone: 'sage-300',
-      photo: { src: null, alt: 'The proposal', label: 'Photo · the proposal' },
+      photo: {
+        src: `${MEDIA}/story-ch2-the-question.webp`,
+        width: 960,
+        height: 1280,
+        loop: `${MEDIA}/story-ch2-the-question-living-photo.mp4`,
+        alt: 'Emmanuel and Mary smiling together on the night of the proposal',
+        label: 'Photo · the proposal',
+      },
     },
     {
       number: 'Chapter three',
@@ -153,8 +173,10 @@ export const story = {
       body: 'On the twelfth of December we begin the rest of our lives — and we want you there.',
       tone: 'sage-150',
       photo: {
-        src: null,
-        alt: 'Mary and Emmanuel, pre-wedding shoot',
+        src: `${MEDIA}/story-ch3-pre-wedding.webp`,
+        width: 960,
+        height: 1280,
+        alt: 'Mary in a burgundy suit, seated, from the pre-wedding shoot',
         label: 'Photo · pre-wedding',
       },
     },
@@ -212,85 +234,146 @@ export const gallery = {
     { id: 'photo', label: 'Photos' },
     { id: 'video', label: 'Films' },
   ],
+  // Order + spans tile flush at 2 columns (phones) and 4 columns (desktop):
+  // [pw1][  film  ][pw2]      then  [cake][  behind  ][pw4]
+  // [pw1][  film  ][pw3]            [knee][  scenes  ][ring]
   items: [
     {
       id: 'pw1',
       kind: 'photo',
       label: 'Pre-wedding · 01',
-      alt: 'Pre-wedding photo',
+      alt: 'Mary and Emmanuel, pre-wedding portrait',
       tone: 'sage-200',
       rows: 4,
       cols: 1,
-      src: null,
+      src: `${MEDIA}/gallery-pre-wedding-01-tall.webp`,
+      width: 640,
+      height: 1280,
+      loop: null,
       videoUrl: null,
+      videoPoster: null,
     },
     {
-      id: 'eng',
+      id: 'film',
       kind: 'video',
       label: 'Engagement film',
-      alt: 'Engagement film',
+      alt: 'Our engagement film: the set-up, the proposal on one knee, the ring and the hug',
       tone: 'sage-150',
-      rows: 3,
+      rows: 4,
       cols: 2,
-      src: null,
-      videoUrl: null,
+      src: `${MEDIA}/gallery-engagement-film-tile-loop-poster.jpg`,
+      width: 720,
+      height: 522,
+      loop: `${MEDIA}/gallery-engagement-film-tile-loop.mp4`,
+      videoUrl: `${MEDIA}/engagement-film-vertical.mp4`,
+      videoPoster: `${MEDIA}/engagement-film-vertical-poster.jpg`,
     },
     {
       id: 'pw2',
       kind: 'photo',
       label: 'Pre-wedding · 02',
-      alt: 'Pre-wedding photo',
+      alt: 'Pre-wedding portrait in a cream suit',
       tone: 'sage-300',
       rows: 2,
       cols: 1,
-      src: null,
+      src: `${MEDIA}/gallery-pre-wedding-02-square.webp`,
+      width: 1000,
+      height: 1000,
+      loop: null,
       videoUrl: null,
+      videoPoster: null,
     },
     {
       id: 'pw3',
       kind: 'photo',
       label: 'Pre-wedding · 03',
-      alt: 'Pre-wedding photo',
+      alt: 'Pre-wedding portrait in a black and gold suit',
       tone: 'sage-100',
       rows: 2,
       cols: 1,
-      src: null,
+      src: `${MEDIA}/gallery-pre-wedding-03-square.webp`,
+      width: 860,
+      height: 860,
+      loop: null,
       videoUrl: null,
+      videoPoster: null,
+    },
+    {
+      id: 'cake',
+      kind: 'photo',
+      label: 'The cake',
+      alt: 'The proposal cake',
+      tone: 'sage-400',
+      rows: 2,
+      cols: 1,
+      src: `${MEDIA}/gallery-proposal-cake-square.webp`,
+      width: 1000,
+      height: 1000,
+      loop: null,
+      videoUrl: null,
+      videoPoster: null,
     },
     {
       id: 'bts',
       kind: 'video',
       label: 'Behind the scenes',
-      alt: 'Behind the scenes film',
+      alt: 'Behind the scenes: candles, petals and the cake being set up for the proposal',
       tone: 'sage-300',
-      rows: 3,
+      rows: 4,
       cols: 2,
-      src: null,
-      videoUrl: null,
-    },
-    {
-      id: 'intro',
-      kind: 'photo',
-      label: 'Introduction',
-      alt: 'Introduction ceremony',
-      tone: 'sage-400',
-      rows: 2,
-      cols: 1,
-      src: null,
-      videoUrl: null,
+      src: `${MEDIA}/gallery-behind-the-scenes-loop-poster.jpg`,
+      width: 720,
+      height: 522,
+      loop: `${MEDIA}/gallery-behind-the-scenes-loop.mp4`,
+      videoUrl: `${MEDIA}/gallery-behind-the-scenes-loop.mp4`,
+      videoPoster: `${MEDIA}/gallery-behind-the-scenes-loop-poster.jpg`,
     },
     {
       id: 'pw4',
       kind: 'photo',
       label: 'Pre-wedding · 04',
-      alt: 'Pre-wedding photo',
+      alt: 'Mary laughing, pre-wedding portrait',
       tone: 'sage-150',
       rows: 2,
       cols: 1,
-      src: null,
+      src: `${MEDIA}/gallery-pre-wedding-04-square.webp`,
+      width: 1000,
+      height: 1000,
+      loop: null,
       videoUrl: null,
+      videoPoster: null,
     },
-  ] satisfies readonly GalleryItem[], // order + spans tile flush at 2 and 4 columns
+    {
+      id: 'knee',
+      kind: 'photo',
+      label: 'On one knee',
+      alt: 'Emmanuel on one knee, proposing to Mary',
+      tone: 'sage-200',
+      rows: 2,
+      cols: 1,
+      src: `${MEDIA}/gallery-on-one-knee-square.webp`,
+      width: 1000,
+      height: 1000,
+      loop: null,
+      videoUrl: null,
+      videoPoster: null,
+    },
+    {
+      id: 'ring',
+      kind: 'photo',
+      label: 'The ring',
+      alt: 'Mary showing her engagement ring',
+      tone: 'sage-100',
+      rows: 2,
+      cols: 1,
+      src: `${MEDIA}/gallery-ring-closeup-square.webp`,
+      width: 1000,
+      height: 1000,
+      loop: null,
+      videoUrl: null,
+      videoPoster: null,
+    },
+  ] satisfies readonly GalleryItem[],
 
   videosPending: '[YouTube/Drive links or mp4]',
   shareLine: 'Share your photos on the day with',
@@ -413,6 +496,13 @@ export const share = {
   date: event.dateDots,
   guestMessage: (name: string, link: string) =>
     `Dear ${name}, we're getting married and we'd love you to celebrate with us — ${event.dateLong}, ${venue.name}, ${event.city}.\n\nOpen your invitation: ${link}\n\nWith love,\nMary & Emmanuel`,
+} as const
+
+export const music = {
+  src: `${MEDIA}/engagement-film-score.mp3`,
+  label: 'Music',
+  play: 'Play music',
+  pause: 'Pause music',
 } as const
 
 export const intro = {

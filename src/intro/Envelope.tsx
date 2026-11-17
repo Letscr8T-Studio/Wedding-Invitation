@@ -4,6 +4,7 @@ import { couple, intro } from '../content'
 import { cx } from '../lib/cx'
 import { getGuestName } from '../lib/guestName'
 import { markIntroSeen, prefersReducedMotion } from '../lib/intro'
+import { backgroundMusic } from '../lib/music'
 
 type Phase = 'closed' | 'open' | 'leaving'
 
@@ -89,6 +90,7 @@ export function Envelope({ onDone }: { onDone: () => void }) {
   }
 
   const openEnvelope = () => {
+    backgroundMusic.startFromGesture()
     markIntroSeen()
     setPhase('open')
   }

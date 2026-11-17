@@ -37,14 +37,15 @@ Work one phase at a time. At the end of each phase, run `npm run build`, fix any
 
 ## Phase 6 — Polish ("the madness")
 - [x] Scroll reveals and the hero load animation.
-- [ ] Optional background music toggle (an mp3 in `/public/audio`; plays only after the seal tap; remembers mute). _Waiting on a song from the couple._
+- [x] Optional background music toggle (`/public/media/engagement-film-score.mp3`; plays only after the seal tap; remembers mute; steps aside while the film plays).
 - [x] `.ics` download alongside Google Calendar.
 - [x] Generate `public/og.png` (1200×630) and `public/invite-card.png` (1080×1350) from the invite design. `npm run share` renders `share.html` with the installed Chrome.
 - [x] Favicon and apple-touch-icon (M&E monogram).
 - [x] Lighthouse mobile: Performance ≥ 90, Accessibility ≥ 95. _(92–94 / 100 / 100 / 100)_
 
 ## Phase 7 — Real content
-- [ ] Swap in the couple's photos. Convert to WebP at about 1600px on the long edge and about 75% quality, using `sharp` in a one-off script.
+- [x] Swap in the couple's photos (supplied pre-graded as WebP in `public/media/`; see `src/maryandemmanuel-media/PLACEMENT.md`). Still missing: a chapter-one "how we met" photo and introduction-ceremony photos.
+- [x] Video loops autoplay only on a good, non-metered connection (posters on mobile data / data-saver / reduced motion); the full film loads only when tapped.
 - [ ] Replace every `[placeholder]` in content.ts.
 - [ ] `grep -r "\[" src/content.ts` should come back empty before launch.
 

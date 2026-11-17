@@ -1,5 +1,6 @@
 import { domAnimation, LazyMotion } from 'motion/react'
 import { startTransition, useEffect, useRef, useState } from 'react'
+import { MusicToggle } from './components/MusicToggle'
 import { site } from './content'
 import { Envelope } from './intro/Envelope'
 import { shouldShowIntro } from './lib/intro'
@@ -76,6 +77,7 @@ export default function App() {
       <div ref={siteRef} className="overflow-x-clip">
         {siteMounted && <Site heroReady={!showIntro} />}
       </div>
+      {!showIntro && <MusicToggle />}
     </LazyMotion>
   )
 }

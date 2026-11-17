@@ -30,3 +30,6 @@ dist-ssr
 # Guest list and generated links (private)
 guests.txt
 guest-links.csv
+
+# Source media from the couple (the used files are copied to public/media)
+src/maryandemmanuel-media/

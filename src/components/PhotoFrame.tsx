@@ -1,5 +1,6 @@
 import type { Tone } from '../content'
 import { cx } from '../lib/cx'
+import { LoopVideo } from './LoopVideo'
 import { Sprig } from './Sprig'
 
 const tones: Record<Tone, string> = {
@@ -28,6 +29,7 @@ type Props = {
   sizes?: string
   labelStyle?: 'plain' | 'pill'
   ornament?: boolean
+  loop?: string | null
   className?: string
 }
 
@@ -44,6 +46,7 @@ export function PhotoFrame({
   sizes,
   labelStyle = 'plain',
   ornament = false,
+  loop,
   className,
 }: Props) {
   const frame = cx('relative overflow-hidden', shapes[shape], tones[tone], className)
@@ -59,10 +62,18 @@ export function PhotoFrame({
           height={height}
           sizes={sizes}
           loading={priority ? 'eager' : 'lazy'}
-          decoding={priority ? 'sync' : 'async'}
+          decoding="async"
           {...(priority ? { fetchpriority: 'high' } : {})}
           className="absolute inset-0 h-full w-full object-cover"
         />
+        {loop && (
+          <LoopVideo
+            src={loop}
+            poster={src}
+            fallback={null}
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+        )}
       </div>
     )
   }

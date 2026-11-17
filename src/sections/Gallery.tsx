@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Container } from '../components/Container'
 import { Lightbox } from '../components/Lightbox'
+import { LoopVideo } from '../components/LoopVideo'
 import { PlayBadge } from '../components/PlayBadge'
 import { Reveal } from '../components/Reveal'
 import { SectionHeading } from '../components/SectionHeading'
@@ -68,8 +69,18 @@ function Tile({ item, onOpen }: { item: GalleryItem; onOpen: () => void }) {
         <img
           src={item.src}
           alt=""
+          width={item.width}
+          height={item.height}
           loading="lazy"
           decoding="async"
+          className="absolute inset-0 size-full object-cover transition-transform duration-700 ease-garden group-hover:scale-[1.03]"
+        />
+      )}
+      {item.loop && item.src && (
+        <LoopVideo
+          src={item.loop}
+          poster={item.src}
+          fallback={null}
           className="absolute inset-0 size-full object-cover transition-transform duration-700 ease-garden group-hover:scale-[1.03]"
         />
       )}
@@ -78,14 +89,17 @@ function Tile({ item, onOpen }: { item: GalleryItem; onOpen: () => void }) {
           <PlayBadge className="size-14 group-hover:scale-105 sm:size-[72px]" />
         </span>
       )}
-      <span
-        className={cx(
-          'absolute bottom-3.5 left-4 text-[11px] font-normal tracking-[0.22em] uppercase',
-          item.src ? 'rounded-full bg-ivory/85 px-3 py-1.5 text-forest-900' : 'text-forest-900',
-        )}
-      >
-        {item.label}
-      </span>
+      {(isVideo || !item.src) && (
+        <span
+          aria-hidden="true"
+          className={cx(
+            'absolute bottom-3 left-3 max-w-[calc(100%-24px)] text-[10px] font-normal tracking-[0.18em] whitespace-nowrap text-forest-900 uppercase sm:bottom-3.5 sm:left-4 sm:text-[11px] sm:tracking-[0.22em]',
+            item.src && 'rounded-full bg-ivory/85 px-3 py-1.5',
+          )}
+        >
+          {item.label}
+        </span>
+      )}
     </button>
   )
 }

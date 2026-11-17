@@ -2,8 +2,23 @@ import { Container } from '../components/Container'
 import { PhotoFrame } from '../components/PhotoFrame'
 import { Reveal, RevealGroup, RevealItem } from '../components/Reveal'
 import { SectionHeading } from '../components/SectionHeading'
-import { story } from '../content'
+import { story, type Photo, type Tone } from '../content'
 import { cx } from '../lib/cx'
+
+function ChapterPhoto({ photo, tone }: { photo: Photo; tone: Tone }) {
+  return (
+    <PhotoFrame
+      ratio="3 / 4"
+      tone={tone}
+      src={photo.src}
+      alt={photo.alt}
+      label={photo.label}
+      width={photo.width ?? 960}
+      height={photo.height ?? 1280}
+      loop={photo.loop}
+    />
+  )
+}
 
 export function Story() {
   return (
@@ -28,16 +43,7 @@ export function Story() {
               i === 1 && 'lg:pt-16 md:max-lg:[&>:first-child]:order-last',
             )}
           >
-            <PhotoFrame
-              ratio="3 / 4"
-              tone={chapter.tone}
-              src={chapter.photo.src}
-              alt={chapter.photo.alt}
-              label={chapter.photo.label}
-              width={800}
-              height={1067}
-              sizes="(min-width: 1024px) 400px, (min-width: 768px) 45vw, 100vw"
-            />
+            <ChapterPhoto photo={chapter.photo} tone={chapter.tone} />
             <article className="flex flex-col gap-5">
               <p className="m-0 font-display text-lg text-sage-600 italic">{chapter.number}</p>
               <h3 className="m-0 font-display text-[34px] leading-[1.1] font-normal">
