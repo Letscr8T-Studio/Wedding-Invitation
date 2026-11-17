@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>You're invited — Mary &amp; Emmanuel</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&amp;family=Jost:wght@300;400;500&amp;family=Pinyon+Script&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#FBFAF5}a:hover{color:#DCE5D3}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #2E3B2C; color: #FBFAF5; font-family: 'Jost', sans-serif; font-weight: 300; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 72px 28px 56px; overflow: hidden; position: relative">
+  <svg viewBox="0 0 390 844" width="390" height="844" style="position: absolute; inset: 0; opacity: 0.35" fill="none" stroke="#6F8A66" stroke-width="0.8" aria-hidden="true"><path d="M-20 120 C 60 140, 120 80, 180 100"/><path d="M40 128 C 44 116, 56 110, 66 112 C 62 122, 50 128, 40 128Z"/><path d="M90 118 C 96 106, 108 102, 118 106 C 112 116, 100 120, 90 118Z"/><path d="M410 720 C 330 700, 270 760, 210 740"/><path d="M350 712 C 346 724, 334 730, 324 728 C 328 718, 340 712, 350 712Z"/><path d="M300 722 C 294 734, 282 738, 272 734 C 278 724, 290 720, 300 722Z"/></svg>
+
+  <div style="position: relative; display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center">
+    <span style="font-size: 11px; letter-spacing: 0.34em; text-transform: uppercase; color: #C8D5BE; font-weight: 400">{{greeting}}</span>
+    <span style="font-family: 'Cormorant Garamond', serif; font-size: 34px; font-style: italic; font-weight: 300">you're invited</span>
+  </div>
+
+  <div style="position: relative; width: 320px; height: 380px; display: flex; align-items: flex-end; justify-content: center">
+    <!-- envelope back -->
+    <div style="position: absolute; bottom: 0; left: 0; width: 320px; height: 210px; background: #B7C9AE; border-radius: 6px"></div>
+    <!-- card -->
+    <div style="{{cardStyle}}">
+      <span style="font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; color: #55634F; font-weight: 500">The wedding of</span>
+      <span style="font-family: 'Cormorant Garamond', serif; font-size: 38px; line-height: 0.95; color: #2E3B2C; font-weight: 300">Mary</span>
+      <span style="font-family: 'Pinyon Script', cursive; font-size: 26px; line-height: 1; color: #6F8A66">&amp;</span>
+      <span style="font-family: 'Cormorant Garamond', serif; font-size: 38px; line-height: 0.95; color: #2E3B2C; font-style: italic; font-weight: 300">Emmanuel</span>
+      <span style="margin-top: 10px; font-size: 11px; letter-spacing: 0.24em; color: #2E3B2C; font-weight: 400">12 · 12 · 2026 — KADUNA</span>
+    </div>
+    <!-- front pocket -->
+    <div style="position: absolute; bottom: 0; left: 0; width: 320px; height: 210px; background: #C8D5BE; border-radius: 6px; clip-path: polygon(0 0, 50% 52%, 100% 0, 100% 100%, 0 100%); z-index: 3"></div>
+    <!-- flap -->
+    <div style="{{flapStyle}}"></div>
+    <!-- seal -->
+    <button type="button" onClick="{{open}}" aria-label="Open the invitation" style="{{sealStyle}}">
+      <span style="font-family: 'Pinyon Script', cursive; font-size: 26px; color: #FBFAF5; line-height: 1">M&amp;E</span>
+    </button>
+  </div>
+
+  <div style="position: relative; display: flex; flex-direction: column; align-items: center; gap: 16px; min-height: 104px; justify-content: flex-end">
+    <sc-if value="{{closed}}" hint-placeholder-val="{{ true }}">
+      <span style="font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase; color: #C8D5BE">Tap the seal to open</span>
+    </sc-if>
+    <sc-if value="{{opened}}" hint-placeholder-val="{{ false }}">
+      <a href="Main.dc.html" style="text-decoration: none; min-height: 52px; display: inline-flex; align-items: center; padding: 0 32px; border-radius: 999px; background: #DCE5D3; color: #2E3B2C; font-size: 12px; letter-spacing: 0.26em; text-transform: uppercase; font-weight: 500">Enter our wedding</a>
+    </sc-if>
+    <span style="font-family: 'Cormorant Garamond', serif; font-size: 16px; font-style: italic; color: #C8D5BE">Proverbs 18:22</span>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"guestName":{"editor":"text","default":"Dear guest"},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { open: false }; }
+  renderVals() {
+    const o = this.state.open;
+    return {
+      greeting: this.props.guestName ?? 'Dear guest',
+      closed: !o, opened: o,
+      open: () => this.setState({ open: !o }),
+      cardStyle: 'position: absolute; left: 22px; bottom: 14px; width: 276px; height: 300px; background: #FBFAF5; border-radius: 4px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; text-align: center; z-index: ' + (o ? 2 : 1) + '; transition: transform .9s cubic-bezier(.2,.8,.2,1) .35s; transform: translateY(' + (o ? '-120px' : '40px') + '); box-shadow: 0 20px 40px -24px rgba(0,0,0,0.5)',
+      flapStyle: 'position: absolute; left: 0; bottom: 100px; width: 320px; height: 110px; background: #A9BE9F; clip-path: polygon(0 0, 100% 0, 50% 100%); transform-origin: top center; transition: transform .6s ease, z-index 0s .3s; z-index: ' + (o ? 0 : 4) + '; transform: translateY(0) rotateX(' + (o ? 180 : 0) + 'deg); bottom: 100px; top: auto; margin-bottom: 0',
+      sealStyle: 'position: absolute; left: 124px; bottom: 64px; width: 72px; height: 72px; border-radius: 999px; border: none; cursor: pointer; background: #5E7556; box-shadow: 0 0 0 4px rgba(94,117,86,0.35), 0 10px 20px -8px rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; z-index: 5; transition: opacity .3s, transform .3s; opacity: ' + (o ? 0 : 1) + '; transform: scale(' + (o ? 0.6 : 1) + '); pointer-events: ' + (o ? 'none' : 'auto'),
+    };
+  }
+}
+</script>
+</body>
+</html>
