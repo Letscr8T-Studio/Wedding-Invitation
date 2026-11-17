@@ -147,9 +147,34 @@ export function Envelope({ onDone }: { onDone: () => void }) {
             className={cx(
               'absolute inset-0 transition-transform duration-900 perspective-[1000px]',
               ease,
-              open ? 'translate-y-0' : '-translate-y-[75px]',
+              open ? 'translate-y-0' : '-translate-y-[100px]',
             )}
           >
+            <div
+              aria-hidden="true"
+              onClick={open ? undefined : openEnvelope}
+              className={cx(
+                'absolute top-full left-0 flex w-full cursor-pointer flex-col items-center gap-2.5 pt-5 transition-opacity duration-300',
+                open ? 'pointer-events-none opacity-0' : 'intro-hint',
+              )}
+            >
+              <svg
+                width="18"
+                height="34"
+                viewBox="0 0 18 34"
+                fill="none"
+                strokeWidth="1.3"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="hint-bob stroke-ivory"
+              >
+                <path d="M9 32V3M3 9l6-6 6 6" />
+              </svg>
+              <span className="text-[13px] font-normal tracking-[0.3em] text-ivory uppercase">
+                {intro.tapHint}
+              </span>
+            </div>
+
             <div className="absolute bottom-0 left-0 h-[210px] w-full rounded-md bg-sage-300" />
 
             <div
@@ -192,7 +217,7 @@ export function Envelope({ onDone }: { onDone: () => void }) {
       </div>
 
       <div className="relative flex min-h-[104px] flex-col items-center justify-end gap-4 bg-forest-900">
-        {open ? (
+        {open && (
           <button
             ref={enterRef}
             type="button"
@@ -201,8 +226,6 @@ export function Envelope({ onDone }: { onDone: () => void }) {
           >
             {intro.enter}
           </button>
-        ) : (
-          <span className="text-xs tracking-[0.28em] text-sage-200 uppercase">{intro.tapHint}</span>
         )}
         <span className="font-display text-base text-sage-200 italic">{intro.verse}</span>
       </div>

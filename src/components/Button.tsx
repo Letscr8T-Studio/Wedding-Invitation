@@ -4,6 +4,7 @@ import { cx } from '../lib/cx'
 const variants = {
   dark: 'bg-forest-900 text-ivory font-normal hover:bg-forest-800',
   light: 'bg-sage-150 text-forest-900 font-medium hover:bg-ivory',
+  ivory: 'bg-ivory text-forest-900 font-medium hover:bg-sage-150',
   'outline-dark':
     'border border-forest-900 text-forest-900 font-normal hover:bg-forest-900 hover:text-ivory',
   'outline-light':

@@ -57,7 +57,7 @@ export function Countdown() {
         </div>
 
         <div className="flex flex-col items-center gap-2.5">
-          <Button href={event.googleCalendarUrl} variant="outline-light">
+          <Button href={event.googleCalendarUrl} variant="ivory">
             {countdown.addToCalendar}
           </Button>
           <a

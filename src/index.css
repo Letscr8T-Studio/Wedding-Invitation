@@ -112,28 +112,48 @@
       0 10px 20px -8px rgb(0 0 0 / 0.5);
   }
 
+  .seal::before,
   .seal::after {
     content: '';
     position: absolute;
     inset: -4px;
     border-radius: 999px;
-    border: 1px solid var(--color-sage-400);
+    border: 1.5px solid var(--color-sage-200);
     animation: seal-breathe 2.4s var(--ease-garden) infinite;
+    pointer-events: none;
+  }
+
+  .seal::before {
+    animation-delay: 1.2s;
   }
 
   @keyframes seal-breathe {
     0% {
-      opacity: 0.7;
+      opacity: 0.9;
       transform: scale(1);
     }
     100% {
       opacity: 0;
-      transform: scale(1.45);
+      transform: scale(1.7);
     }
   }
 
   .intro-enter {
     animation: rise-in 0.7s var(--ease-garden) 1.15s both;
+  }
+
+  .intro-hint {
+    animation: rise-in 0.8s var(--ease-garden) 0.6s both;
+  }
+
+  .hint-bob {
+    animation: hint-bob 1.1s ease-in-out infinite alternate;
+  }
+
+  @keyframes hint-bob {
+    to {
+      transform: translateY(-7px);
+    }
   }
 
   @keyframes rise-in {
@@ -163,8 +183,11 @@
     }
 
     dialog.lightbox[open],
+    .seal::before,
     .seal::after,
-    .intro-enter {
+    .intro-enter,
+    .intro-hint,
+    .hint-bob {
       animation: none;
     }
   }
