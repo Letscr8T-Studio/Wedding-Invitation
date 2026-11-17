@@ -138,46 +138,56 @@ export function Envelope({ onDone }: { onDone: () => void }) {
         className="relative shrink-0"
       >
         <div
-          className="absolute top-0 left-0 origin-top-left perspective-[1000px]"
+          className="absolute top-0 left-0 origin-top-left"
           style={{ width: STAGE_W, height: STAGE_H, transform: `scale(${scale})` }}
         >
-          <div className="absolute bottom-0 left-0 h-[210px] w-full rounded-md bg-sage-300" />
-
+          {/* Closed, the envelope sits centred in the stage; it eases down as the card rises
+              into the space above, so that space is only used once it's needed. */}
           <div
-            aria-hidden="true"
             className={cx(
-              'absolute bottom-[100px] left-0 h-[110px] w-full origin-top bg-sage-400 [clip-path:polygon(0_0,100%_0,50%_100%)]',
-              'transition-[transform,z-index] [transition-duration:0.6s,0s]',
+              'absolute inset-0 transition-transform duration-900 perspective-[1000px]',
               ease,
-              open ? 'z-1 rotate-x-180 [transition-delay:0s,0.3s]' : 'z-4',
-            )}
-          />
-
-          <InviteCard open={open} />
-
-          <div
-            aria-hidden="true"
-            className="absolute bottom-0 left-0 z-3 h-[210px] w-full rounded-md bg-sage-200 [clip-path:polygon(0_0,50%_52%,100%_0,100%_100%,0_100%)]"
-          />
-
-          <button
-            ref={sealRef}
-            type="button"
-            onClick={openEnvelope}
-            disabled={open}
-            aria-label={intro.openLabel}
-            className={cx(
-              'seal absolute bottom-16 left-[124px] z-5 flex size-[72px] cursor-pointer items-center justify-center rounded-full border-0 bg-sage-600 transition-[opacity,scale] duration-300',
-              ease,
-              open && 'pointer-events-none scale-60 opacity-0',
+              open ? 'translate-y-0' : '-translate-y-[75px]',
             )}
           >
-            <span className="font-script text-[26px] leading-none text-ivory">
-              {couple.monogram.first}
-              {couple.monogram.amp}
-              {couple.monogram.second}
-            </span>
-          </button>
+            <div className="absolute bottom-0 left-0 h-[210px] w-full rounded-md bg-sage-300" />
+
+            <div
+              aria-hidden="true"
+              className={cx(
+                'absolute bottom-[100px] left-0 h-[110px] w-full origin-top bg-sage-400 [clip-path:polygon(0_0,100%_0,50%_100%)]',
+                'transition-[transform,z-index] [transition-duration:0.6s,0s]',
+                ease,
+                open ? 'z-1 rotate-x-180 [transition-delay:0s,0.3s]' : 'z-4',
+              )}
+            />
+
+            <InviteCard open={open} />
+
+            <div
+              aria-hidden="true"
+              className="absolute bottom-0 left-0 z-3 h-[210px] w-full rounded-md bg-sage-200 [clip-path:polygon(0_0,50%_52%,100%_0,100%_100%,0_100%)]"
+            />
+
+            <button
+              ref={sealRef}
+              type="button"
+              onClick={openEnvelope}
+              disabled={open}
+              aria-label={intro.openLabel}
+              className={cx(
+                'seal absolute bottom-16 left-[124px] z-5 flex size-[72px] cursor-pointer items-center justify-center rounded-full border-0 bg-sage-600 transition-[opacity,scale] duration-300',
+                ease,
+                open && 'pointer-events-none scale-60 opacity-0',
+              )}
+            >
+              <span className="font-script text-[26px] leading-none text-ivory">
+                {couple.monogram.first}
+                {couple.monogram.amp}
+                {couple.monogram.second}
+              </span>
+            </button>
+          </div>
         </div>
       </div>
 
