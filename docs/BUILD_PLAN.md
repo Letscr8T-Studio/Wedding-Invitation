@@ -44,7 +44,7 @@ Work one phase at a time. At the end of each phase, run `npm run build`, fix any
 - [x] Lighthouse mobile: Performance ≥ 90, Accessibility ≥ 95. _(92–94 / 100 / 100 / 100)_
 
 ## Phase 7 — Real content
-- [x] Swap in the couple's photos (supplied pre-graded as WebP in `public/media/`; see `src/maryandemmanuel-media/PLACEMENT.md`). Still missing: a chapter-one "how we met" photo and introduction-ceremony photos.
+- [x] Swap in the couple's photos (supplied pre-graded as WebP in `public/media/`; see `src/maryandemmanuel-media/PLACEMENT.md`). Still missing: introduction-ceremony photos.
 - [x] Video loops autoplay only on a good, non-metered connection (posters on mobile data / data-saver / reduced motion); the full film loads only when tapped.
 - [ ] Replace every `[placeholder]` in content.ts.
 - [ ] `grep -r "\[" src/content.ts` should come back empty before launch.

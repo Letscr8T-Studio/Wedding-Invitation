@@ -155,7 +155,13 @@ export const story = {
       title: 'The first hello',
       body: 'It was 2022, and we had both stopped for fuel at the same station. Emmanuel saw Mary waiting in line, stepped out of his car to say hello, and we drove off with each other’s numbers. The best fuel stop of our lives.',
       tone: 'sage-200',
-      photo: { src: null, alt: 'Mary and Emmanuel when they first met', label: 'Photo · 2022' },
+      photo: {
+        src: `${MEDIA}/story-ch1-first-hello.webp`,
+        width: 960,
+        height: 1280,
+        alt: 'Mary and Emmanuel smiling together beside a car, in matching beige trousers',
+        label: 'Photo · 2022',
+      },
     },
     {
       number: 'Chapter two',
