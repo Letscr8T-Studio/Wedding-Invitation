@@ -37,7 +37,7 @@ Mirror this into `src/content.ts`. Anything in `[brackets]` is a placeholder sti
 ## Our story
 - Intro: Three chapters, one love. A little of how we got here.
 - Chapter one: **The first hello**: It was 2022, and we had both stopped for fuel at the same station. Emmanuel saw Mary waiting in line, stepped out of his car to say hello, and we drove off with each other's numbers. The best fuel stop of our lives. Photo label: Photo · 2022
-- Chapter two: **The question**: When Emmanuel knew Mary was bone of his bone, he asked her to marry him. It was 7 November 2026, the day after her birthday, and she said yes.
+- Chapter two: **The question**: Emmanuel didn't rush it. He prayed and fasted until he knew, without a doubt, that Mary was bone of his bone and flesh of his flesh. Then, on 7 November 2026, the day after her birthday, he went down on one knee and asked her to be his wife. She said yes, and our forever began.
 - **No em dashes** anywhere in guest-facing copy; use commas, colons or the · middle dot.
 - Chapter three: **Forever, in Kaduna**: On the twelfth of December we begin the rest of our lives — and we want you there.
 
