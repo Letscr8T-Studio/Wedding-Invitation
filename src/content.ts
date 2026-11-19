@@ -49,7 +49,7 @@ export const contact = {
 } as const
 
 export const site = {
-  title: 'Mary & Emmanuel — 12.12.2026',
+  title: 'Mary & Emmanuel · 12.12.2026',
   description:
     "You're invited! We're getting married on Saturday 12 December 2026 at Didi Park & Lounge, Kaduna, and we'd love you there.",
   hashtag: '#FoundFavour26',
@@ -98,7 +98,7 @@ export const venue = {
 } as const
 
 export const nav = {
-  homeLabel: 'Mary & Emmanuel — back to top',
+  homeLabel: 'Mary & Emmanuel, back to top',
   menuLabel: 'Main',
   links: [
     { href: '#story', label: 'Our story' },
@@ -153,14 +153,14 @@ export const story = {
     {
       number: 'Chapter one',
       title: 'The first hello',
-      body: '[Where we first met — two or three lines, in our own words.]',
+      body: 'It was 2022, and we had both stopped for fuel at the same station. Emmanuel saw Mary waiting in line, stepped out of his car to say hello, and we drove off with each other’s numbers. The best fuel stop of our lives.',
       tone: 'sage-200',
-      photo: { src: null, alt: 'Mary and Emmanuel when they first met', label: 'Photo · [year]' },
+      photo: { src: null, alt: 'Mary and Emmanuel when they first met', label: 'Photo · 2022' },
     },
     {
       number: 'Chapter two',
       title: 'The question',
-      body: '[How Emmanuel proposed, and what Mary said first.]',
+      body: 'When Emmanuel knew Mary was bone of his bone, he asked her to marry him. It was 7 November 2026, the day after her birthday, and she said yes.',
       tone: 'sage-300',
       photo: {
         src: `${MEDIA}/story-ch2-the-question.webp`,
@@ -174,7 +174,7 @@ export const story = {
     {
       number: 'Chapter three',
       title: 'Forever, in Kaduna',
-      body: 'On the twelfth of December we begin the rest of our lives — and we want you there.',
+      body: 'On the twelfth of December we begin the rest of our lives, and we want you there.',
       tone: 'sage-150',
       photo: {
         src: `${MEDIA}/story-ch3-pre-wedding.webp`,
@@ -195,7 +195,7 @@ export const day = {
     {
       time: '[Time]',
       title: 'Guests arrive',
-      note: 'Didi Park & Lounge — welcome drinks in the garden',
+      note: 'Welcome drinks in the garden at Didi Park & Lounge',
     },
     { time: '[Time]', title: 'Reception', note: 'Grand entrance, toasts, dinner & first dance' },
     { time: 'Late', title: 'Dance till dawn', note: 'Bring your dancing shoes' },
@@ -210,7 +210,7 @@ export const day = {
 
 export const colours = {
   heading: { roman: 'Colours', italic: 'of the day' } satisfies Heading,
-  intro: "Come dressed in pale green, crisp white — or both. Let's fill Didi Park with a garden.",
+  intro: "Come dressed in pale green, crisp white, or both. Let's fill Didi Park with a garden.",
   dress: [
     { who: 'Ladies', what: 'Pale green or white gowns, gele welcome' },
     { who: 'Gentlemen', what: 'White kaftan or agbada with a touch of green' },
@@ -221,7 +221,7 @@ export const colours = {
   ],
   asoEbi: {
     title: 'Aso-ebi is available',
-    details: '[Fabric details & price — to confirm]',
+    details: '[Fabric details & price to confirm]',
     cta: 'Order yours',
     href: whatsappLink(
       PHONE_INTL,
@@ -394,7 +394,7 @@ export const gallery = {
 
 export const gift = {
   heading: { roman: 'Bless', italic: 'our new home' } satisfies Heading,
-  body: "Your presence is the greatest gift you could give us. If you'd also like to send something, you can give to us directly — from anywhere in the world.",
+  body: "Your presence is the greatest gift you could give us. If you'd also like to send something, you can give to us directly, from anywhere in the world.",
   bank: 'Providus Bank',
   accountName: couple.brideFullName,
   accountNumber: '6503481739',
@@ -402,7 +402,7 @@ export const gift = {
   copy: 'Copy account number',
   copied: 'Copied ✓',
   copiedAnnouncement: 'Account number copied',
-  copyFailed: 'Couldn’t copy — press and hold the number',
+  copyFailed: 'Couldn’t copy. Press and hold the number instead.',
 } as const
 
 export const rsvp = {
@@ -435,7 +435,7 @@ export const rsvp = {
     note: string
   }) =>
     [
-      "RSVP — Mary & Emmanuel's wedding",
+      "RSVP: Mary & Emmanuel's wedding",
       `Name: ${r.name}`,
       r.phone && `Phone: ${r.phone}`,
       `Attending: ${r.attending === 'yes' ? 'Joyfully accepts' : 'Regretfully declines'}`,
@@ -459,23 +459,23 @@ export const faq = {
   items: [
     {
       q: 'What time does it start?',
-      a: '[Ceremony and reception times — to confirm.] Please arrive 30 minutes early so you’re seated before Mary walks down the aisle.',
+      a: '[Ceremony and reception times to confirm.] Please arrive 30 minutes early so you’re seated before Mary walks down the aisle.',
     },
     {
       q: 'Can I bring a plus-one or children?',
-      a: '[Policy — to confirm.] Please list everyone coming with you on your RSVP so we can plan seating.',
+      a: '[Policy to confirm.] Please list everyone coming with you on your RSVP so we can plan seating.',
     },
     {
       q: 'Is there parking at the venue?',
-      a: '[On-site parking — confirm with the venue.] Didi Park & Lounge sits on Kachia Road, opposite Kalapazi Barracks and behind Enyo Filling Station.',
+      a: '[On-site parking: confirm with the venue.] Didi Park & Lounge sits on Kachia Road, opposite Kalapazi Barracks and behind Enyo Filling Station.',
     },
     {
       q: 'Where do guests from outside Kaduna stay?',
-      a: '[Recommended hotels near Barnawa — to add.]',
+      a: '[Recommended hotels near Barnawa to add.]',
     },
     {
       q: 'Can I take photos?',
-      a: 'Please do — and post them with #FoundFavour26 so we can relive the day through your eyes.',
+      a: 'Please do, and post them with #FoundFavour26 so we can relive the day through your eyes.',
     },
   ],
 } as const
@@ -499,7 +499,7 @@ export const share = {
   seal: hero.seal,
   date: event.dateDots,
   guestMessage: (name: string, link: string) =>
-    `Dear ${name}, we're getting married and we'd love you to celebrate with us — ${event.dateLong}, ${venue.name}, ${event.city}.\n\nOpen your invitation: ${link}\n\nWith love,\nMary & Emmanuel`,
+    `Dear ${name}, we're getting married and we'd love you to celebrate with us on ${event.dateLong} at ${venue.name}, ${event.city}.\n\nOpen your invitation: ${link}\n\nWith love,\nMary & Emmanuel`,
 } as const
 
 export const music = {
@@ -514,7 +514,7 @@ export const intro = {
   defaultGuest: 'Guest',
   invited: 'you’re invited',
   cardEyebrow: 'Join us for the wedding of',
-  cardDate: `${event.dateDots} — ${event.city}`,
+  cardDate: `${event.dateDots} · ${event.city}`,
   tapHint: 'Tap the seal to open',
   openLabel: 'Open the invitation',
   enter: 'Enter our wedding',
