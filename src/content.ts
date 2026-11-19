@@ -160,7 +160,7 @@ export const story = {
     {
       number: 'Chapter two',
       title: 'The question',
-      body: 'Emmanuel didn’t rush it. He prayed and fasted until he knew, without a doubt, that Mary was bone of his bone and flesh of his flesh. Then, on 7 November 2026, the day after her birthday, he went down on one knee and asked her to be his wife. She said yes, and our forever began.',
+      body: 'After a period of waiting on the Lord, I knew without a doubt that Mary was bone of my bone and flesh of my flesh. Then, on 7 November 2026, the day after her birthday, I went down on one knee and asked her to be my wife. She said yes, and our forever began.',
       tone: 'sage-300',
       photo: {
         src: `${MEDIA}/story-ch2-the-question.webp`,
