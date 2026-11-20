@@ -11,7 +11,7 @@ Mirror this into `src/content.ts`. Anything in `[brackets]` is a placeholder sti
 - Bride: **Mary** (full name: Mary Onyinoyi Audu)
 - Groom: **Emmanuel** — [surname]
 - Monogram: M&E
-- Hashtag: `#FoundFavour26`
+- Hashtag: `#EJM26`
 
 ## Date and venue
 - Date: **Saturday, 12 December 2026**
@@ -54,7 +54,6 @@ Mirror this into `src/content.ts`. Anything in `[brackets]` is a placeholder sti
 - Copy: Come dressed in pale green, crisp white — or both. Let's fill Didi Park with a garden.
 - Ladies: Pale green or white gowns, gele welcome
 - Gentlemen: White kaftan or agbada with a touch of green
-- Aso-ebi: "Aso-ebi is available" — [Fabric details & price — to confirm] — button "Order yours" → WhatsApp with the pre-filled text "Hi, I'd like to order the aso-ebi for Mary & Emmanuel's wedding"
 
 ## Gallery
 Photos: `public/images/gallery/*.webp` (the couple will supply them). Videos: [YouTube/Drive links or mp4].
@@ -71,7 +70,7 @@ Placeholder tiles until the media arrives: Pre-wedding 01–04, Introduction, En
 - Heading: Will you be there?
 - Deadline: [RSVP deadline]
 - Phone: **0901 421 4591**: `tel:+2349014214591`, `https://wa.me/2349014214591`
-- Contact name: [Contact person's name]
+- Contact name: Jerry
 - Form fields: Full name (required), Phone, Attending (Joyfully accepts / Regretfully declines), Number of guests (1–4), A prayer or wish for us
 - Thank-you: accepts → "We can't wait to celebrate with you, {firstName}." / declines → "We'll miss you, {firstName}. Thank you for letting us know."
 
@@ -80,9 +79,9 @@ Placeholder tiles until the media arrives: Pre-wedding 01–04, Introduction, En
 2. **Can I bring a plus-one or children?** [Policy — to confirm.] Please list everyone coming with you on your RSVP so we can plan seating.
 3. **Is there parking at the venue?** [On-site parking — confirm with the venue.] Didi Park & Lounge sits on Kachia Road, opposite Kalapazi Barracks and behind Enyo Filling Station.
 4. **Where do guests from outside Kaduna stay?** [Recommended hotels near Barnawa — to add.]
-5. **Can I take photos?** Please do — and post them with #FoundFavour26 so we can relive the day through your eyes.
+5. **Can I take photos?** Please do — and post them with #EJM26 so we can relive the day through your eyes.
 
 ## Footer
 - Saturday, 12 December 2026 · Didi Park & Lounge, Kaduna
-- #FoundFavour26
+- #EJM26
 - Made with love by Letscr8t Studio

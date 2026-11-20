@@ -5,7 +5,36 @@ import { SectionHeading } from '../components/SectionHeading'
 import { story, type Photo, type Tone } from '../content'
 import { cx } from '../lib/cx'
 
+/** Two portraits side by side in one 3:4 frame. */
+function Diptych({ photo }: { photo: Photo & { src: string; pair: NonNullable<Photo['pair']> } }) {
+  const panel = 'h-full w-full rounded-[4px] object-cover'
+  return (
+    <div className="relative w-full min-w-0" style={{ aspectRatio: '3 / 4' }}>
+      <div className="absolute inset-0 grid grid-cols-2 gap-1.5">
+        <img
+          src={photo.src}
+          alt={photo.alt}
+          loading="lazy"
+          decoding="async"
+          className={panel}
+          style={photo.focus ? { objectPosition: photo.focus } : undefined}
+        />
+        <img
+          src={photo.pair.src}
+          alt={photo.pair.alt}
+          loading="lazy"
+          decoding="async"
+          className={panel}
+          style={photo.pair.focus ? { objectPosition: photo.pair.focus } : undefined}
+        />
+      </div>
+    </div>
+  )
+}
+
 function ChapterPhoto({ photo, tone }: { photo: Photo; tone: Tone }) {
+  if (photo.src && photo.pair)
+    return <Diptych photo={{ ...photo, src: photo.src, pair: photo.pair }} />
   return (
     <PhotoFrame
       ratio="3 / 4"

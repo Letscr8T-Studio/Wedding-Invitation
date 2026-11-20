@@ -15,6 +15,10 @@ export type Photo = {
   readonly height?: number
   /** Silent loop played over the photo on good connections. */
   readonly loop?: string | null
+  /** A second portrait shown side by side with the first (a diptych). */
+  readonly pair?: { readonly src: string; readonly alt: string; readonly focus?: string }
+  /** CSS object-position, to keep faces in frame when cropped. */
+  readonly focus?: string
 }
 
 export type GalleryItem = {
@@ -29,6 +33,8 @@ export type GalleryItem = {
   readonly src: string | null
   readonly width?: number
   readonly height?: number
+  /** CSS object-position for the tile crop. */
+  readonly focus?: string
   /** Silent preview loop shown in the tile on good connections. */
   readonly loop: string | null
   /** Full film opened in the lightbox. */
@@ -45,14 +51,14 @@ export const contact = {
   phoneDisplay: '0901 421 4591',
   tel: `tel:+${PHONE_INTL}`,
   whatsapp: whatsappLink(PHONE_INTL),
-  name: "[Contact person's name]",
+  name: 'Jerry',
 } as const
 
 export const site = {
   title: 'Mary & Emmanuel · 12.12.2026',
   description:
     "You're invited! We're getting married on Saturday 12 December 2026 at Didi Park & Lounge, Kaduna, and we'd love you there.",
-  hashtag: '#FoundFavour26',
+  hashtag: '#EJM26',
   credit: {
     before: 'Made with love by ',
     name: 'Letscr8t Studio',
@@ -182,11 +188,15 @@ export const story = {
       body: 'On the twelfth of December we begin the rest of our lives, and we want you there.',
       tone: 'sage-150',
       photo: {
-        src: `${MEDIA}/story-ch3-pre-wedding.webp`,
-        width: 960,
-        height: 1280,
-        alt: 'Mary in a burgundy suit, seated, from the pre-wedding shoot',
+        src: `${MEDIA}/gallery-pre-wedding-02-square.webp`,
+        width: 1000,
+        height: 1000,
+        alt: 'Emmanuel in a cream suit, from the pre-wedding shoot',
         label: 'Photo · pre-wedding',
+        pair: {
+          src: `${MEDIA}/story-ch3-pre-wedding.webp`,
+          alt: 'Mary in a wine suit, seated, from the pre-wedding shoot',
+        },
       },
     },
   ] satisfies readonly { number: string; title: string; body: string; tone: Tone; photo: Photo }[],
@@ -224,15 +234,6 @@ export const colours = {
     { name: 'Pale green', hex: '#C8D5BE' },
     { name: 'White', hex: '#FFFFFF' },
   ],
-  asoEbi: {
-    title: 'Aso-ebi is available',
-    details: '[Fabric details & price to confirm]',
-    cta: 'Order yours',
-    href: whatsappLink(
-      PHONE_INTL,
-      "Hi, I'd like to order the aso-ebi for Mary & Emmanuel's wedding",
-    ),
-  },
 } as const
 
 export const gallery = {
@@ -244,13 +245,14 @@ export const gallery = {
     { id: 'video', label: 'Films' },
   ],
   // Order + spans tile flush at 2 columns (phones) and 4 columns (desktop):
-  // [pw1][  film  ][pw2]      then  [cake][  behind  ][pw4]
-  // [pw1][  film  ][pw3]            [knee][  scenes  ][ring]
+  // [ring ][  film  ][suit ]
+  // [ring ][  film  ][hands]
+  // [cake ][ behind ][look ]
   items: [
     {
-      id: 'pw1',
+      id: 'ring',
       kind: 'photo',
-      label: 'Pre-wedding · 01',
+      label: 'Proposal night',
       alt: 'Emmanuel holding Mary’s hand, her engagement ring catching the light',
       tone: 'sage-200',
       rows: 4,
@@ -278,31 +280,32 @@ export const gallery = {
       videoPoster: `${MEDIA}/engagement-film-vertical-poster.jpg`,
     },
     {
-      id: 'pw2',
+      id: 'suit',
       kind: 'photo',
-      label: 'Pre-wedding · 02',
-      alt: 'Pre-wedding portrait in a cream suit',
-      tone: 'sage-300',
-      rows: 2,
-      cols: 1,
-      src: `${MEDIA}/gallery-pre-wedding-02-square.webp`,
-      width: 1000,
-      height: 1000,
-      loop: null,
-      videoUrl: null,
-      videoPoster: null,
-    },
-    {
-      id: 'pw3',
-      kind: 'photo',
-      label: 'Pre-wedding · 03',
-      alt: 'Pre-wedding portrait in a black and gold suit',
+      label: 'Pre-wedding',
+      alt: 'Emmanuel in a black and gold suit',
       tone: 'sage-100',
       rows: 2,
       cols: 1,
       src: `${MEDIA}/gallery-pre-wedding-03-square.webp`,
       width: 860,
       height: 860,
+      loop: null,
+      videoUrl: null,
+      videoPoster: null,
+    },
+    {
+      id: 'hands',
+      kind: 'photo',
+      label: 'Proposal night',
+      alt: 'Emmanuel and Mary holding hands and smiling, rose petals at their feet',
+      tone: 'sage-300',
+      rows: 2,
+      cols: 1,
+      src: `${MEDIA}/story-ch2-proposal-night.webp`,
+      width: 662,
+      height: 1241,
+      focus: '50% 22%',
       loop: null,
       videoUrl: null,
       videoPoster: null,
@@ -328,7 +331,7 @@ export const gallery = {
       label: 'Behind the scenes',
       alt: 'Behind the scenes: candles, petals and the cake being set up for the proposal',
       tone: 'sage-300',
-      rows: 4,
+      rows: 2,
       cols: 2,
       src: `${MEDIA}/gallery-behind-the-scenes-loop-poster.jpg`,
       width: 720,
@@ -338,46 +341,17 @@ export const gallery = {
       videoPoster: `${MEDIA}/gallery-behind-the-scenes-loop-poster.jpg`,
     },
     {
-      id: 'pw4',
+      id: 'look',
       kind: 'photo',
-      label: 'Pre-wedding · 04',
-      alt: 'Mary laughing, pre-wedding portrait',
+      label: 'Proposal night',
+      alt: 'Emmanuel and Mary looking down at her engagement ring together',
       tone: 'sage-150',
       rows: 2,
       cols: 1,
-      src: `${MEDIA}/gallery-pre-wedding-04-square.webp`,
-      width: 1000,
-      height: 1000,
-      loop: null,
-      videoUrl: null,
-      videoPoster: null,
-    },
-    {
-      id: 'knee',
-      kind: 'photo',
-      label: 'On one knee',
-      alt: 'Emmanuel on one knee, proposing to Mary',
-      tone: 'sage-200',
-      rows: 2,
-      cols: 1,
-      src: `${MEDIA}/gallery-on-one-knee-square.webp`,
-      width: 1000,
-      height: 1000,
-      loop: null,
-      videoUrl: null,
-      videoPoster: null,
-    },
-    {
-      id: 'ring',
-      kind: 'photo',
-      label: 'The ring',
-      alt: 'Mary showing her engagement ring',
-      tone: 'sage-100',
-      rows: 2,
-      cols: 1,
-      src: `${MEDIA}/gallery-ring-closeup-square.webp`,
-      width: 1000,
-      height: 1000,
+      src: `${MEDIA}/hero-couple-ring.webp`,
+      width: 720,
+      height: 1280,
+      focus: '50% 30%',
       loop: null,
       videoUrl: null,
       videoPoster: null,
@@ -480,7 +454,7 @@ export const faq = {
     },
     {
       q: 'Can I take photos?',
-      a: 'Please do, and post them with #FoundFavour26 so we can relive the day through your eyes.',
+      a: `Please do, and post them with ${site.hashtag} so we can relive the day through your eyes.`,
     },
   ],
 } as const

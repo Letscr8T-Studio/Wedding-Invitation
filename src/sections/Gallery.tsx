@@ -71,6 +71,7 @@ function Tile({ item, onOpen }: { item: GalleryItem; onOpen: () => void }) {
           alt=""
           width={item.width}
           height={item.height}
+          style={item.focus ? { objectPosition: item.focus } : undefined}
           loading="lazy"
           decoding="async"
           className="absolute inset-0 size-full object-cover transition-transform duration-700 ease-garden group-hover:scale-[1.03]"

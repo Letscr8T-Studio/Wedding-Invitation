@@ -1,4 +1,3 @@
-import { Button } from '../components/Button'
 import { Container } from '../components/Container'
 import { Reveal } from '../components/Reveal'
 import { SectionHeading } from '../components/SectionHeading'
@@ -31,7 +30,6 @@ function Swatch({ name, hex, hexClassName }: { name: string; hex: string; hexCla
 }
 
 export function Colours() {
-  const { asoEbi } = colours
   return (
     <Container
       as="section"
@@ -54,13 +52,6 @@ export function Colours() {
             </div>
           ))}
         </dl>
-        <div className="mt-3 flex flex-wrap items-center justify-between gap-4 rounded-md border border-dashed border-sage-300 p-6">
-          <div className="flex flex-col gap-1">
-            <span className="font-display text-[26px] leading-tight">{asoEbi.title}</span>
-            <span className="text-sm text-forest-700">{asoEbi.details}</span>
-          </div>
-          <Button href={asoEbi.href}>{asoEbi.cta}</Button>
-        </div>
       </Reveal>
       <Reveal delay={0.15}>
         <Swatches />
