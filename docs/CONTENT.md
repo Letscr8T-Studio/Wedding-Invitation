@@ -44,10 +44,12 @@ Mirror this into `src/content.ts`. Anything in `[brackets]` is a placeholder sti
 ## Order of the day
 | Time | Title | Note |
 |---|---|---|
-| 9:00 am | Holy Matrimony | [Church name to confirm] |
-| [Time] | Guests arrive | Didi Park & Lounge — welcome drinks in the garden |
-| [Time] | Reception | Grand entrance, toasts, dinner & first dance |
+| 8:30 am | Guests arrive | Find your seat in the garden at Didi Park & Lounge |
+| 9:00 am | Holy Matrimony | Our white wedding, in the garden |
+| [Time] | Reception | Same garden: grand entrance, toasts, dinner & first dance |
 | Late | Dance till dawn | Bring your dancing shoes |
+
+The white wedding and the reception are both in the garden at Didi Park & Lounge.
 
 ## Colours of the day
 - Colours: **Pale green `#C8D5BE`** and **White `#FFFFFF`**
@@ -68,18 +70,18 @@ Placeholder tiles until the media arrives: Pre-wedding 01–04, Introduction, En
 
 ## RSVP and contact
 - Heading: Will you be there?
-- Deadline: [RSVP deadline]
+- Line: Kindly respond so we can save you a seat. (No deadline.)
 - Phone: **0901 421 4591**: `tel:+2349014214591`, `https://wa.me/2349014214591`
 - Contact name: Jerry
 - Form fields: Full name (required), Phone, Attending (Joyfully accepts / Regretfully declines), Number of guests (1–4), A prayer or wish for us
 - Thank-you: accepts → "We can't wait to celebrate with you, {firstName}." / declines → "We'll miss you, {firstName}. Thank you for letting us know."
 
 ## FAQ
-1. **What time does it start?** The church service starts at 9:00 am. [Reception time to confirm.] Please arrive 30 minutes early so you're seated before Mary walks down the aisle.
-2. **Can I bring a plus-one or children?** [Policy — to confirm.] Please list everyone coming with you on your RSVP so we can plan seating.
-3. **Is there parking at the venue?** [On-site parking — confirm with the venue.] Didi Park & Lounge sits on Kachia Road, opposite Kalapazi Barracks and behind Enyo Filling Station.
-4. **Where do guests from outside Kaduna stay?** [Recommended hotels near Barnawa — to add.]
-5. **Can I take photos?** Please do — and post them with #EJM26 so we can relive the day through your eyes.
+1. **What time does it start?** Our white wedding starts at 9:00 am in the garden at Didi Park & Lounge, and the reception follows in the same garden, so there's no moving between venues. Please arrive 30 minutes early so you're seated before Mary walks down the aisle.
+2. **Can I bring a plus-one?** Yes, you're welcome to. Just make sure your RSVP includes everyone coming with you, so we can save a seat for each of them.
+3. **Is there parking at the venue?** Yes, there's parking at the venue. Didi Park & Lounge sits on Kachia Road, opposite Kalapazi Barracks and behind Enyo Filling Station.
+4. **Where do guests from outside Kaduna stay?** Please RSVP and let us know you're travelling in. We'll share hotel details and recommendations with you directly.
+5. **Can I take photos?** Please do, and post them with #EJM26 so we can relive the day through your eyes.
 
 ## Footer
 - Saturday, 12 December 2026 · Didi Park & Lounge, Kaduna

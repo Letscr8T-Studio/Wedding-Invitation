@@ -206,13 +206,17 @@ export const day = {
   heading: { roman: 'The', italic: 'day' } satisfies Heading,
   scheduleTitle: `Order of the day · ${event.dateShort}`,
   schedule: [
-    { time: '9:00 am', title: 'Holy Matrimony', note: '[Church name to confirm]' },
+    {
+      time: '8:30 am',
+      title: 'Guests arrive',
+      note: 'Find your seat in the garden at Didi Park & Lounge',
+    },
+    { time: '9:00 am', title: 'Holy Matrimony', note: 'Our white wedding, in the garden' },
     {
       time: '[Time]',
-      title: 'Guests arrive',
-      note: 'Welcome drinks in the garden at Didi Park & Lounge',
+      title: 'Reception',
+      note: 'Same garden: grand entrance, toasts, dinner & first dance',
     },
-    { time: '[Time]', title: 'Reception', note: 'Grand entrance, toasts, dinner & first dance' },
     { time: 'Late', title: 'Dance till dawn', note: 'Bring your dancing shoes' },
   ],
   venueEyebrow: 'The venue',
@@ -386,11 +390,7 @@ export const gift = {
 
 export const rsvp = {
   heading: { roman: 'Will you', italic: 'be there?' } satisfies Heading,
-  deadline: {
-    before: 'Kindly respond by ',
-    date: '[RSVP deadline]',
-    after: ' so we can save you a seat.',
-  },
+  intro: 'Kindly respond so we can save you a seat.',
   contactEyebrow: 'Enquiries & RSVP',
   call: 'Call',
   whatsapp: 'WhatsApp',
@@ -438,19 +438,19 @@ export const faq = {
   items: [
     {
       q: 'What time does it start?',
-      a: 'The church service starts at 9:00 am. [Reception time to confirm.] Please arrive 30 minutes early so you’re seated before Mary walks down the aisle.',
+      a: 'Our white wedding starts at 9:00 am in the garden at Didi Park & Lounge, and the reception follows in the same garden, so there’s no moving between venues. Please arrive 30 minutes early so you’re seated before Mary walks down the aisle.',
     },
     {
-      q: 'Can I bring a plus-one or children?',
-      a: '[Policy to confirm.] Please list everyone coming with you on your RSVP so we can plan seating.',
+      q: 'Can I bring a plus-one?',
+      a: 'Yes, you’re welcome to. Just make sure your RSVP includes everyone coming with you, so we can save a seat for each of them.',
     },
     {
       q: 'Is there parking at the venue?',
-      a: '[On-site parking: confirm with the venue.] Didi Park & Lounge sits on Kachia Road, opposite Kalapazi Barracks and behind Enyo Filling Station.',
+      a: 'Yes, there’s parking at the venue. Didi Park & Lounge sits on Kachia Road, opposite Kalapazi Barracks and behind Enyo Filling Station.',
     },
     {
       q: 'Where do guests from outside Kaduna stay?',
-      a: '[Recommended hotels near Barnawa to add.]',
+      a: 'Please RSVP and let us know you’re travelling in. We’ll share hotel details and recommendations with you directly.',
     },
     {
       q: 'Can I take photos?',

@@ -61,11 +61,7 @@ function Contact() {
   return (
     <div className="flex flex-col gap-6">
       <SectionHeading id="rsvp-heading" heading={rsvp.heading} size="display" stack />
-      <p className="m-0 max-w-[420px] text-[17px] leading-[1.75] text-forest-800">
-        {rsvp.deadline.before}
-        <strong className="font-medium">{rsvp.deadline.date}</strong>
-        {rsvp.deadline.after}
-      </p>
+      <p className="m-0 max-w-[420px] text-[17px] leading-[1.75] text-forest-800">{rsvp.intro}</p>
       <div className="mt-2 flex flex-col gap-3 border-t border-sage-300 pt-4">
         <span className="pt-4 text-[11px] font-medium tracking-[0.28em] uppercase">
           {rsvp.contactEyebrow}
