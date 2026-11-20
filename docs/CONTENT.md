@@ -15,7 +15,7 @@ Mirror this into `src/content.ts`. Anything in `[brackets]` is a placeholder sti
 
 ## Date and venue
 - Date: **Saturday, 12 December 2026**
-- Countdown target: `2026-12-12T10:00:00+01:00` (update when the real ceremony time is confirmed)
+- Countdown target: `2026-12-12T09:00:00+01:00` (church service starts 9:00 am)
 - Venue: **Didi Park & Lounge, Kaduna South**
 - Address: 5 Kachia Road, Barnawa, Kaduna 800282, Kaduna State
 - Landmarks: Opposite Kalapazi Barracks · Behind Enyo Filling Station
@@ -36,7 +36,7 @@ Mirror this into `src/content.ts`. Anything in `[brackets]` is a placeholder sti
 
 ## Our story
 - Intro: Three chapters, one love. A little of how we got here.
-- Chapter one: **The first hello**: It was 2022, and we had both stopped for fuel at the same station. Emmanuel saw Mary waiting in line, stepped out of his car to say hello, and we drove off with each other's numbers. The best fuel stop of our lives. Photo label: Photo · 2022
+- Chapter one: **The first hello** (told by Emmanuel): It was a beautiful, sunny Sunday in 2021, at a gas station in Osapa London, Lekki, when I saw this pretty damsel. I walked up to her like I was controlled by the power of her beauty, and we left with each other's numbers. Photo label: Photo · 2021
 - Chapter two: **The question**: After a period of waiting on the Lord, I knew without a doubt that Mary was bone of my bone and flesh of my flesh. Then, on 7 November 2026, the day after her birthday, I went down on one knee and asked her to be my wife. She said yes, and our forever began. (Told by Emmanuel.)
 - **No em dashes** anywhere in guest-facing copy; use commas, colons or the · middle dot.
 - Chapter three: **Forever, in Kaduna**: On the twelfth of December we begin the rest of our lives — and we want you there.
@@ -44,7 +44,7 @@ Mirror this into `src/content.ts`. Anything in `[brackets]` is a placeholder sti
 ## Order of the day
 | Time | Title | Note |
 |---|---|---|
-| [Time] | Holy Matrimony | [Church & time to confirm] |
+| 9:00 am | Holy Matrimony | [Church name to confirm] |
 | [Time] | Guests arrive | Didi Park & Lounge — welcome drinks in the garden |
 | [Time] | Reception | Grand entrance, toasts, dinner & first dance |
 | Late | Dance till dawn | Bring your dancing shoes |
@@ -76,7 +76,7 @@ Placeholder tiles until the media arrives: Pre-wedding 01–04, Introduction, En
 - Thank-you: accepts → "We can't wait to celebrate with you, {firstName}." / declines → "We'll miss you, {firstName}. Thank you for letting us know."
 
 ## FAQ
-1. **What time does it start?** [Ceremony and reception times — to confirm.] Please arrive 30 minutes early so you're seated before Mary walks down the aisle.
+1. **What time does it start?** The church service starts at 9:00 am. [Reception time to confirm.] Please arrive 30 minutes early so you're seated before Mary walks down the aisle.
 2. **Can I bring a plus-one or children?** [Policy — to confirm.] Please list everyone coming with you on your RSVP so we can plan seating.
 3. **Is there parking at the venue?** [On-site parking — confirm with the venue.] Didi Park & Lounge sits on Kachia Road, opposite Kalapazi Barracks and behind Enyo Filling Station.
 4. **Where do guests from outside Kaduna stay?** [Recommended hotels near Barnawa — to add.]

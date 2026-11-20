@@ -76,7 +76,7 @@ export const event = {
   dateDots: '12 · 12 · 2026',
   dateShort: 'Sat 12 Dec',
   city: 'Kaduna',
-  countdownTarget: '2026-12-12T10:00:00+01:00',
+  countdownTarget: '2026-12-12T09:00:00+01:00',
   calendarTitle: "Mary & Emmanuel's Wedding",
   calendarStart: '20261212',
   calendarEnd: '20261213',
@@ -118,9 +118,9 @@ export const hero = {
   placeLabel: event.city,
   place: venue.name,
   photo: {
-    src: `${MEDIA}/hero-couple-portrait.webp`,
-    width: 960,
-    height: 1200,
+    src: `${MEDIA}/hero-couple-ring.webp`,
+    width: 720,
+    height: 1280,
     alt: 'Emmanuel holding Mary’s hand as they look at her engagement ring',
     label: 'Couple portrait',
   } satisfies Photo,
@@ -153,14 +153,14 @@ export const story = {
     {
       number: 'Chapter one',
       title: 'The first hello',
-      body: 'It was 2022, and we had both stopped for fuel at the same station. Emmanuel saw Mary waiting in line, stepped out of his car to say hello, and we drove off with each other’s numbers. The best fuel stop of our lives.',
+      body: 'It was a beautiful, sunny Sunday in 2021, at a gas station in Osapa London, Lekki, when I saw this pretty damsel. I walked up to her like I was controlled by the power of her beauty, and we left with each other’s numbers.',
       tone: 'sage-200',
       photo: {
         src: `${MEDIA}/story-ch1-first-hello.webp`,
         width: 960,
         height: 1280,
         alt: 'Mary and Emmanuel smiling together beside a car, in matching beige trousers',
-        label: 'Photo · 2022',
+        label: 'Photo · 2021',
       },
     },
     {
@@ -169,11 +169,10 @@ export const story = {
       body: 'After a period of waiting on the Lord, I knew without a doubt that Mary was bone of my bone and flesh of my flesh. Then, on 7 November 2026, the day after her birthday, I went down on one knee and asked her to be my wife. She said yes, and our forever began.',
       tone: 'sage-300',
       photo: {
-        src: `${MEDIA}/story-ch2-the-question.webp`,
-        width: 960,
-        height: 1280,
-        loop: `${MEDIA}/story-ch2-the-question-living-photo.mp4`,
-        alt: 'Emmanuel and Mary smiling together on the night of the proposal',
+        src: `${MEDIA}/story-ch2-proposal-night.webp`,
+        width: 662,
+        height: 1241,
+        alt: 'Emmanuel and Mary holding hands and smiling on the night of the proposal, rose petals at their feet',
         label: 'Photo · the proposal',
       },
     },
@@ -197,7 +196,7 @@ export const day = {
   heading: { roman: 'The', italic: 'day' } satisfies Heading,
   scheduleTitle: `Order of the day · ${event.dateShort}`,
   schedule: [
-    { time: '[Time]', title: 'Holy Matrimony', note: '[Church & time to confirm]' },
+    { time: '9:00 am', title: 'Holy Matrimony', note: '[Church name to confirm]' },
     {
       time: '[Time]',
       title: 'Guests arrive',
@@ -252,12 +251,12 @@ export const gallery = {
       id: 'pw1',
       kind: 'photo',
       label: 'Pre-wedding · 01',
-      alt: 'Mary and Emmanuel, pre-wedding portrait',
+      alt: 'Emmanuel holding Mary’s hand, her engagement ring catching the light',
       tone: 'sage-200',
       rows: 4,
       cols: 1,
-      src: `${MEDIA}/gallery-pre-wedding-01-tall.webp`,
-      width: 640,
+      src: `${MEDIA}/gallery-engagement-tall.webp`,
+      width: 691,
       height: 1280,
       loop: null,
       videoUrl: null,
@@ -465,7 +464,7 @@ export const faq = {
   items: [
     {
       q: 'What time does it start?',
-      a: '[Ceremony and reception times to confirm.] Please arrive 30 minutes early so you’re seated before Mary walks down the aisle.',
+      a: 'The church service starts at 9:00 am. [Reception time to confirm.] Please arrive 30 minutes early so you’re seated before Mary walks down the aisle.',
     },
     {
       q: 'Can I bring a plus-one or children?',
