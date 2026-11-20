@@ -213,7 +213,7 @@ export const day = {
     },
     { time: '9:00 am', title: 'Holy Matrimony', note: 'Our white wedding, in the garden' },
     {
-      time: '[Time]',
+      time: '1:00 pm',
       title: 'Reception',
       note: 'Same garden: grand entrance, toasts, dinner & first dance',
     },
@@ -230,10 +230,6 @@ export const day = {
 export const colours = {
   heading: { roman: 'Colours', italic: 'of the day' } satisfies Heading,
   intro: "Come dressed in pale green, crisp white, or both. Let's fill Didi Park with a garden.",
-  dress: [
-    { who: 'Ladies', what: 'Pale green or white gowns, gele welcome' },
-    { who: 'Gentlemen', what: 'White kaftan or agbada with a touch of green' },
-  ],
   swatches: [
     { name: 'Pale green', hex: '#C8D5BE' },
     { name: 'White', hex: '#FFFFFF' },
@@ -438,7 +434,7 @@ export const faq = {
   items: [
     {
       q: 'What time does it start?',
-      a: 'Our white wedding starts at 9:00 am in the garden at Didi Park & Lounge, and the reception follows in the same garden, so there’s no moving between venues. Please arrive 30 minutes early so you’re seated before Mary walks down the aisle.',
+      a: 'Our white wedding starts at 9:00 am in the garden at Didi Park & Lounge, and the reception follows at 1:00 pm in the same garden, so there’s no moving between venues. Please arrive 30 minutes early so you’re seated before Mary walks down the aisle.',
     },
     {
       q: 'Can I bring a plus-one?',

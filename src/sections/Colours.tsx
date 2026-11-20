@@ -42,16 +42,6 @@ export function Colours() {
         <p className="m-0 max-w-[460px] text-[17px] leading-[1.75] text-forest-800">
           {colours.intro}
         </p>
-        <dl className="m-0 flex flex-col gap-3.5 pt-2">
-          {colours.dress.map((row) => (
-            <div key={row.who} className="flex items-baseline gap-4">
-              <dt className="min-w-24 text-[11px] font-medium tracking-[0.24em] uppercase">
-                {row.who}
-              </dt>
-              <dd className="m-0 text-base text-forest-800">{row.what}</dd>
-            </div>
-          ))}
-        </dl>
       </Reveal>
       <Reveal delay={0.15}>
         <Swatches />

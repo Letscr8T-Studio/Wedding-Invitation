@@ -46,7 +46,7 @@ Mirror this into `src/content.ts`. Anything in `[brackets]` is a placeholder sti
 |---|---|---|
 | 8:30 am | Guests arrive | Find your seat in the garden at Didi Park & Lounge |
 | 9:00 am | Holy Matrimony | Our white wedding, in the garden |
-| [Time] | Reception | Same garden: grand entrance, toasts, dinner & first dance |
+| 1:00 pm | Reception | Same garden: grand entrance, toasts, dinner & first dance |
 | Late | Dance till dawn | Bring your dancing shoes |
 
 The white wedding and the reception are both in the garden at Didi Park & Lounge.
@@ -54,8 +54,6 @@ The white wedding and the reception are both in the garden at Didi Park & Lounge
 ## Colours of the day
 - Colours: **Pale green `#C8D5BE`** and **White `#FFFFFF`**
 - Copy: Come dressed in pale green, crisp white — or both. Let's fill Didi Park with a garden.
-- Ladies: Pale green or white gowns, gele welcome
-- Gentlemen: White kaftan or agbada with a touch of green
 
 ## Gallery
 Photos: `public/images/gallery/*.webp` (the couple will supply them). Videos: [YouTube/Drive links or mp4].
@@ -77,7 +75,7 @@ Placeholder tiles until the media arrives: Pre-wedding 01–04, Introduction, En
 - Thank-you: accepts → "We can't wait to celebrate with you, {firstName}." / declines → "We'll miss you, {firstName}. Thank you for letting us know."
 
 ## FAQ
-1. **What time does it start?** Our white wedding starts at 9:00 am in the garden at Didi Park & Lounge, and the reception follows in the same garden, so there's no moving between venues. Please arrive 30 minutes early so you're seated before Mary walks down the aisle.
+1. **What time does it start?** Our white wedding starts at 9:00 am in the garden at Didi Park & Lounge, and the reception follows at 1:00 pm in the same garden, so there's no moving between venues. Please arrive 30 minutes early so you're seated before Mary walks down the aisle.
 2. **Can I bring a plus-one?** Yes, you're welcome to. Just make sure your RSVP includes everyone coming with you, so we can save a seat for each of them.
 3. **Is there parking at the venue?** Yes, there's parking at the venue. Didi Park & Lounge sits on Kachia Road, opposite Kalapazi Barracks and behind Enyo Filling Station.
 4. **Where do guests from outside Kaduna stay?** Please RSVP and let us know you're travelling in. We'll share hotel details and recommendations with you directly.
