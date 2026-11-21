@@ -255,7 +255,7 @@ export const gallery = {
     { id: 'video', label: 'Films' },
   ],
   // Order + spans tile flush at 2 columns (phones) and 4 columns (desktop):
-  // [ring ][  film  ][suit ]
+  // [ring ][  film  ][hands]
   // [ring ][  film  ][hands]
   // [cake ][ behind ][look ]
   items: [
@@ -290,32 +290,16 @@ export const gallery = {
       videoPoster: `${MEDIA}/engagement-film-vertical-poster.jpg`,
     },
     {
-      id: 'suit',
-      kind: 'photo',
-      label: 'Pre-wedding',
-      alt: 'Emmanuel in a black and gold suit',
-      tone: 'sage-100',
-      rows: 2,
-      cols: 1,
-      src: `${MEDIA}/gallery-pre-wedding-03-square.webp`,
-      width: 860,
-      height: 860,
-      loop: null,
-      videoUrl: null,
-      videoPoster: null,
-    },
-    {
       id: 'hands',
       kind: 'photo',
       label: 'Proposal night',
       alt: 'Emmanuel and Mary holding hands and smiling, rose petals at their feet',
       tone: 'sage-300',
-      rows: 2,
+      rows: 4,
       cols: 1,
       src: `${MEDIA}/story-ch2-proposal-night.webp`,
       width: 662,
       height: 1241,
-      focus: '50% 22%',
       loop: null,
       videoUrl: null,
       videoPoster: null,
