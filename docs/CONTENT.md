@@ -37,7 +37,7 @@ Mirror this into `src/content.ts`. Anything in `[brackets]` is a placeholder sti
 ## Our story
 - Intro: Three chapters, one love. A little of how we got here.
 - Chapter one: **The first hello** (told by Emmanuel): It was a beautiful, sunny Sunday in 2021, at a gas station in Osapa London, Lekki, when I saw this pretty damsel. I walked up to her like I was controlled by the power of her beauty, and we left with each other's numbers. Photo label: Photo · 2021
-- Chapter two: **The question**: After a period of waiting on the Lord, I knew without a doubt that Mary was bone of my bone and flesh of my flesh. Then, on 7 November 2026, the day after her birthday, I went down on one knee and asked her to be my wife. She said yes, and our forever began. (Told by Emmanuel.)
+- Chapter two: **The question**: After a period of waiting on the Lord, I knew without a doubt that Mary was bone of my bones and flesh of my flesh. Then, on 7 November 2026, the day after her birthday, I went down on one knee and asked her to be my wife. She said yes, and our forever began. (Told by Emmanuel.)
 - **No em dashes** anywhere in guest-facing copy; use commas, colons or the · middle dot.
 - Chapter three: **Forever, in Kaduna**: On the twelfth of December we begin the rest of our lives — and we want you there.
 
