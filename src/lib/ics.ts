@@ -10,7 +10,11 @@ type IcsEvent = {
 const escape = (s: string) =>
   s.replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\n/g, '\\n')
 
-/** All-day iCalendar event (RFC 5545). `start`/`end` are YYYYMMDD; `end` is exclusive. */
+/** `YYYYMMDD` is an all-day date (end exclusive); `YYYYMMDDTHHMMSSZ` is a UTC time. */
+const dateLine = (name: string, value: string) =>
+  value.includes('T') ? `${name}:${value}` : `${name};VALUE=DATE:${value}`
+
+/** iCalendar event (RFC 5545). */
 export function buildIcs(e: IcsEvent) {
   const stamp = e.stamp
     .toISOString()
@@ -26,8 +30,8 @@ export function buildIcs(e: IcsEvent) {
       'BEGIN:VEVENT',
       `UID:${e.uid}`,
       `DTSTAMP:${stamp}`,
-      `DTSTART;VALUE=DATE:${e.start}`,
-      `DTEND;VALUE=DATE:${e.end}`,
+      dateLine('DTSTART', e.start),
+      dateLine('DTEND', e.end),
       `SUMMARY:${escape(e.title)}`,
       `LOCATION:${escape(e.location)}`,
       'END:VEVENT',

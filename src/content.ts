@@ -82,14 +82,14 @@ export const event = {
   dateDots: '12 · 12 · 2026',
   dateShort: 'Sat 12 Dec',
   city: 'Kaduna',
-  countdownTarget: '2026-12-12T09:00:00+01:00',
+  countdownTarget: '2026-12-12T08:00:00+01:00',
   calendarTitle: "Mary & Emmanuel's Wedding",
-  calendarStart: '20261212',
-  calendarEnd: '20261213',
+  calendarStart: '20261212T060000Z',
+  calendarEnd: '20261212T110000Z',
   calendarLocation: 'Didi Park & Lounge, 5 Kachia Road, Barnawa, Kaduna 800282',
   icsFile: 'mary-and-emmanuel.ics',
   googleCalendarUrl:
-    'https://calendar.google.com/calendar/render?action=TEMPLATE&text=Mary+%26+Emmanuel%27s+Wedding&dates=20261212/20261213&location=Didi+Park+and+Lounge,+5+Kachia+Road,+Barnawa,+Kaduna',
+    'https://calendar.google.com/calendar/render?action=TEMPLATE&text=Mary+%26+Emmanuel%27s+Wedding&dates=20261212T060000Z/20261212T110000Z&location=Didi+Park+and+Lounge,+5+Kachia+Road,+Barnawa,+Kaduna',
 } as const
 
 export const venue = {
@@ -162,11 +162,17 @@ export const story = {
       body: 'It was a beautiful, sunny Sunday in 2021, at a gas station in Osapa London, Lekki, when I saw this pretty damsel. I walked up to her like I was controlled by the power of her beauty, and we left with each other’s numbers.',
       tone: 'sage-200',
       photo: {
-        src: `${MEDIA}/story-ch1-first-hello.webp`,
-        width: 960,
-        height: 1280,
-        alt: 'Mary and Emmanuel smiling together beside a car, in matching beige trousers',
+        src: `${MEDIA}/gallery-pre-wedding-03-square.webp`,
+        width: 860,
+        height: 860,
+        alt: 'Emmanuel in a black and gold suit, smiling',
+        focus: '55% 50%',
         label: 'Photo · 2021',
+        pair: {
+          src: `${MEDIA}/story-ch1-mary-green.webp`,
+          alt: 'Mary in a green blazer',
+          focus: '55% 35%',
+        },
       },
     },
     {
@@ -207,17 +213,21 @@ export const day = {
   scheduleTitle: `Order of the day · ${event.dateShort}`,
   schedule: [
     {
-      time: '8:30 am',
+      time: '7:00 am',
       title: 'Guests arrive',
       note: 'Find your seat in the garden at Didi Park & Lounge',
     },
-    { time: '9:00 am', title: 'Holy Matrimony', note: 'Our white wedding, in the garden' },
+    { time: '8:00 am', title: 'Holy Matrimony', note: 'Our white wedding, in the garden' },
     {
-      time: '1:00 pm',
+      time: '9:00 am',
       title: 'Reception',
-      note: 'Same garden: grand entrance, toasts, dinner & first dance',
+      note: 'Same garden: grand entrance, toasts, food & first dance',
     },
-    { time: 'Late', title: 'Dance till dawn', note: 'Bring your dancing shoes' },
+    {
+      time: '12:00 pm',
+      title: 'Last dance',
+      note: 'We dance till noon, so bring your dancing shoes',
+    },
   ],
   venueEyebrow: 'The venue',
   directions: 'Get directions',
@@ -434,7 +444,7 @@ export const faq = {
   items: [
     {
       q: 'What time does it start?',
-      a: 'Our white wedding starts at 9:00 am in the garden at Didi Park & Lounge, and the reception follows at 1:00 pm in the same garden, so there’s no moving between venues. Please arrive 30 minutes early so you’re seated before Mary walks down the aisle.',
+      a: 'Our white wedding starts at 8:00 am in the garden at Didi Park & Lounge, and the reception follows at 9:00 am in the same garden, so there’s no moving between venues. Please arrive by 7:00 am so you’re seated before Mary walks down the aisle.',
     },
     {
       q: 'Can I bring a plus-one?',
